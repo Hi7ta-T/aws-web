@@ -1,0 +1,33 @@
+data "aws_ami" "ami" {
+  most_recent = true
+  owners      = ["amazon"]
+
+  filter {
+    name   = "name"
+    values = "al2023-ami-*-x86_64"
+  }
+}
+
+resource "aws_instance" "aws-ec2-az1" {
+  vpc_id          = "aws_vpc.main.id"
+  subnet_id       = "aws_subnet.private-1a.id"
+  security_groups = "aws_security_group.ec2_sg.id"
+  ami             = "data.aws_ami.ami.value"
+  instance_type   = "t3.micro"
+
+  tags {
+    Name = "aws-ec2-az1"
+  }
+}
+
+resource "aws_instance" "aws-ec2-az2" {
+  vpc_id          = "aws_vpc.main.id"
+  subnet_id       = "aws_subnet.private-1c.id"
+  security_groups = "aws_security_group.ec2_sg.id"
+  ami             = "data.aws_ami.ami.value"
+  instance_type   = "t3.micro"
+
+  tags {
+    Name = "aws-ec2-az2"
+  }
+}

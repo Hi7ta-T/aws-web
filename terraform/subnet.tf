@@ -1,6 +1,6 @@
 # Public Subnet(az1,az2)
 resource "aws_subnet" "public-1a" {
-  vpc_id            = "aws_vpc.main.id"
+  vpc_id            = aws_vpc.main.id
   availability_zone = "ap-northeast-1a"
   cidr_block        = "192.168.1.0/24"
   tags {
@@ -9,7 +9,7 @@ resource "aws_subnet" "public-1a" {
 }
 
 resource "aws_subnet" "public-1c" {
-  vpc_id            = "aws_vpc.main.id"
+  vpc_id            = aws_vpc.main.id
   availability_zone = "ap-northeast-1c"
   cidr_block        = "192.168.2.0/24"
   tags {
@@ -19,7 +19,7 @@ resource "aws_subnet" "public-1c" {
 
 # Private Subnet(az1,az2)
 resource "aws_subnet" "private-1a" {
-  vpc_id            = "aws_vpc.main.id"
+  vpc_id            = aws_vpc.main.id
   availability_zone = "ap-northeast-1a"
   cidr_block        = "192.168.11.0/24"
   tags {
@@ -28,7 +28,7 @@ resource "aws_subnet" "private-1a" {
 }
 
 resource "aws_subnet" "private-1c" {
-  vpc_id            = "aws_vpc.main.id"
+  vpc_id            = aws_vpc.main.id
   availability_zone = "ap-northeast-1c"
   cidr_block        = "192.168.12.0/24"
   tags {
@@ -38,7 +38,7 @@ resource "aws_subnet" "private-1c" {
 
 # DB Subnet(az1,az2)
 resource "aws_subnet" "dbsubnet-1a" {
-  vpc_id            = "aws_vpc.main.id"
+  vpc_id            = aws_vpc.main.id
   availability_zone = "ap-northeast-1a"
   cidr_block        = "192.168.21.0/24"
   tags {
@@ -47,7 +47,7 @@ resource "aws_subnet" "dbsubnet-1a" {
 }
 
 resource "aws_subnet" "dbsubnet-1c" {
-  vpc_id            = "aws_vpc.main.id"
+  vpc_id            = aws_vpc.main.id
   availability_zone = "ap-northeast-1c"
   cidr_block        = "192.168.22.0/24"
   tags {

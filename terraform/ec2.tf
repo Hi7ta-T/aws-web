@@ -11,10 +11,10 @@ data "aws_ami" "ami" {
 
 # EC2作成(az1,az2)
 resource "aws_instance" "aws-ec2-az1" {
-  vpc_id          = "aws_vpc.main.id"
-  subnet_id       = "aws_subnet.private-1a.id"
-  security_groups = "aws_security_group.ec2_sg.id"
-  ami             = "data.aws_ami.ami.value"
+  vpc_id          = aws_vpc.main.id
+  subnet_id       = aws_subnet.private-1a.id
+  security_groups = [aws_security_group.ec2_sg.id]
+  ami             = data.aws_ami.ami.value
   instance_type   = "t3.micro"
 
   tags {
@@ -23,10 +23,10 @@ resource "aws_instance" "aws-ec2-az1" {
 }
 
 resource "aws_instance" "aws-ec2-az2" {
-  vpc_id          = "aws_vpc.main.id"
-  subnet_id       = "aws_subnet.private-1c.id"
-  security_groups = "aws_security_group.ec2_sg.id"
-  ami             = "data.aws_ami.ami.value"
+  vpc_id          = aws_vpc.main.id
+  subnet_id       = aws_subnet.private-1c.id
+  security_groups = [aws_security_group.ec2_sg.id]
+  ami             = data.aws_ami.ami.value
   instance_type   = "t3.micro"
 
   tags {

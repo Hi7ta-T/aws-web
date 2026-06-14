@@ -1,3 +1,4 @@
+# AMI取得
 data "aws_ami" "ami" {
   most_recent = true
   owners      = ["amazon"]
@@ -8,6 +9,7 @@ data "aws_ami" "ami" {
   }
 }
 
+# EC2作成(az1,az2)
 resource "aws_instance" "aws-ec2-az1" {
   vpc_id          = "aws_vpc.main.id"
   subnet_id       = "aws_subnet.private-1a.id"

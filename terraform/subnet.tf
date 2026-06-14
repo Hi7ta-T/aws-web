@@ -1,3 +1,4 @@
+# Public Subnet(az1,az2)
 resource "aws_subnet" "public-1a" {
   vpc_id            = "aws_vpc.main.id"
   availability_zone = "ap-northeast-1a"
@@ -16,6 +17,7 @@ resource "aws_subnet" "public-1c" {
   }
 }
 
+# Private Subnet(az1,az2)
 resource "aws_subnet" "private-1a" {
   vpc_id            = "aws_vpc.main.id"
   availability_zone = "ap-northeast-1a"
@@ -34,6 +36,7 @@ resource "aws_subnet" "private-1c" {
   }
 }
 
+# DB Subnet(az1,az2)
 resource "aws_subnet" "dbsubnet-1a" {
   vpc_id            = "aws_vpc.main.id"
   availability_zone = "ap-northeast-1a"

@@ -1,3 +1,4 @@
+# ALB
 resource "aws_security_group" "alb_sg" {
   vpc_id = "aws_vpc.main.id"
   tags {
@@ -12,6 +13,7 @@ resource "aws_security_group" "alb_sg" {
   }
 }
 
+# EC2
 resource "aws_security_group" "ec2_sg" {
   vpc_id = "aws_vpc.main.id"
   tags {
@@ -26,6 +28,7 @@ resource "aws_security_group" "ec2_sg" {
   }
 }
 
+# RDS
 resource "aws_security_group" "rds_sg" {
   vpc_id = "aws_vpc.main.id"
   tags {

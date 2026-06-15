@@ -9,7 +9,7 @@ AWSを用いて作成した3層構成のインフラ基盤をTerraformでIaC化�
 <br>
 
 ## 開発記録
-本成果物は2026年3月から作成を開始し、継続して修正を行っている。<br>
+本成果物は2026年3月から継続して修正を行っている。<br>
 <br>
 2026年6月のTerraform導入時にGit管理のトラブルが発生し、原因究明を行う前に誤ってGitの初期化を実施。<br>
 結果としてそれまでのコミット履歴が削除されたため、現在のコミット数は2026年6月以降のものである。<br>
@@ -40,12 +40,9 @@ VPC内の各サービスの比較、選定理由はこちら<br>
 - NAT GatewayをAZごとに分割して配置。<br>
 運用コストの増加と引き換えにAZ障害時の可用性を確保した。<br>
 
-## 本成果物のNW構成図
-![NW構成図](docs/aws-network.png)
-- 詳細なNW構成はこちら<br>
-[NW構成](design-network.md)
-
 ## Terraform(IaC)
+
+[コードレビュー、検証結果](verification.md)
 NW通信に関わるVPC内リソースのみIaC化済。
 今後はCloudWatch Alarm、SNS、Route 53といったVPC外リソースのIaC化を予定している。
 
@@ -61,6 +58,10 @@ NW通信に関わるVPC内リソースのみIaC化済。
 | EC2 | [ec2.tf](terraform/ec2.tf)|
 | RDS | [rds.tf](terraform/rds.tf)|
 
+## 本成果物のNW構成図
+![NW構成図](docs/aws-network.png)
+- 詳細なNW構成はこちら<br>
+[NW構成](design-network.md)
 
 ## 障害時の運用
 CloudWatch AlarmとSNSを連携させて<br>

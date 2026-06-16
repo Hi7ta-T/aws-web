@@ -13,7 +13,7 @@ resource "aws_db_instance" "aws-rds" {
   secutity_groups      = [aws_security_group.rds_sg.id]
   multi-az             = true
 
-  tags {
+  tags = {
     Name = "aws-web-rds"
   }
 }

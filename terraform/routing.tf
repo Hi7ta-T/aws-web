@@ -5,7 +5,7 @@ resource "aws_route_table" "public" {
     cidr_block = "0.0.0.0/0"
     gateway_id = aws_internet_gateway.igw.id
   }
-  tags {
+  tags = {
     Name = "route_igw"
   }
 }
@@ -17,7 +17,7 @@ resource "aws_route_table" "private-az1" {
     cidr_block = "0.0.0.0/0"
     gateway_id = aws_nat_gateway.nat-az1.id
   }
-  tags {
+  tags = {
     Name = "route_nat1"
   }
 }
@@ -28,7 +28,7 @@ resource "aws_route_table" "private-az2" {
     cidr_block = "0.0.0.0/0"
     gateway_id = aws_nat_gateway.nat-az2.id
   }
-  tags {
+  tags = {
     Name = "route_nat2"
   }
 }

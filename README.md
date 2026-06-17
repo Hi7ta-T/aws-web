@@ -42,7 +42,7 @@ VPC内の各サービスの比較、選定理由はこちら<br>
 運用コストの増加と引き換えにAZ障害時の可用性を確保した。<br>
 
 ## Terraform(IaC)
-### セルフレビュー、リソースの構築ならびに疎通確認
+### セルフレビュー、リソースの構築と疎通確認
 コードのセルフレビュー方法、ならびにリソースの疎通確認結果はこちら<br>
 [セルフレビュー、検証結果](verification.md)
 <br>
@@ -51,7 +51,7 @@ VPC内の各サービスの比較、選定理由はこちら<br>
 VPC内リソースのIaC化が完了。
 今後はCloudWatch Alarm、SNS、Route 53といったVPC外リソースのIaC化を予定している。
 
-- IaC化済
+IaC化済<br>
 | リソース名 | ファイル| 
 |:-----:|:-----:|
 | VPC | [vpc.tf](terraform/vpc.tf)| 
@@ -65,7 +65,7 @@ VPC内リソースのIaC化が完了。
 | RDS | [rds.tf](terraform/rds.tf)|
 
 
-- IaC化中
+IaC化中<br>
 | リソース名 | ファイル| 
 |:-----:|:-----:|
 | Route 53 | [route53.tf](terraform/.tf)| 

@@ -26,7 +26,6 @@ AWSを用いて作成した3層構成のインフラ基盤をTerraformでIaC化�
 VPC内の各サービスの比較、選定理由はこちら<br>
 [サービス選定理由](service-selection.md)
 <br>
-<br>
 ### 技術スタック
 - Linux(サーバー、開発環境)
 - AWS（インフラ構築）

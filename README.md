@@ -27,7 +27,6 @@ VPC内の各サービスの比較、選定理由はこちら<br>
 [サービス選定理由](service-selection.md)
 <br>
 ### 技術スタック
-- Linux(サーバー、開発環境)
 - AWS（インフラ構築）
 - Terraform（IaC化)
 - FastAPI（API構築)

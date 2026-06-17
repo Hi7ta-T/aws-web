@@ -2,8 +2,8 @@
 ### レビュー手順
 以下の手順でセルフレビューを実施した。
 1. terraform fmt
-- コードの書式、ブロック整理<br>
-2.terraform validate
+- コードの書式、ブロック整理
+2. terraform validate
 - 誤記載やリソース参照ミスをエラーとして検出
 3. TFLint(terraform Lint)
 - コードの品質、ベストプラクティスに関する指摘を検出

@@ -14,10 +14,10 @@ tfsec はセキュリティチェックツールのため、コードが完成�
 <br>
 
 ### エラー検出例
-terraform validate の実行時に検出されたエラー例を記載。
+terraform validate の実行時に頻繁に検出されたエラー例を記載。
 - tagsブロックでの「＝」記載忘れ
 - ALB/EC2/RDSリソースに vpc_id を記載
-- multi-az の誤記載（正：multi_az）
+- 誤記載（multi-az , secututy_groups）
 - リソース別のSubnet 指定ミス<br>
 (subnet_id , subnets , subnet_ids)
 - リソース別のSecurity Group 指定ミス<br>

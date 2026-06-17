@@ -10,7 +10,7 @@ resource "aws_db_instance" "aws-rds" {
   engine               = "mysql"
   allocated_storage    = 100
   secutity_groups      = [aws_security_group.rds_sg.id]
-  multi-az             = true
+  multi_az             = true
 
   tags = {
     Name = "aws-web-rds"

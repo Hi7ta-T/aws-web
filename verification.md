@@ -12,6 +12,7 @@ tfsec はセキュリティチェックツールのため、コードが完成�
 <br>
 
 ### エラー検出例
+terraform validate の実行時に検出されたエラー例を記載。
 - tagsブロックでの「＝」記載忘れ
 - RDSリソースに cidr_id を記載
 - multi-az の誤記載(正:multi_az）

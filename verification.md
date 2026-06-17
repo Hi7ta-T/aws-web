@@ -1,3 +1,4 @@
+
 ## セルフレビュー、検証結果
 
 ### セルフレビュー手順
@@ -16,7 +17,7 @@ tfsec はセキュリティチェックツールのため、コードが完成�
 terraform validate の実行時に検出されたエラー例を記載。
 - tagsブロックでの「＝」記載忘れ
 - RDSリソースに cidr_id を記載
-- multi-az の誤記載(正：multi_az）
+- multi-az の誤記載（正：multi_az）
 - リソース別のSubnet指定ミス<br>
 (subnet_id/subnets/subnet_ids)
 

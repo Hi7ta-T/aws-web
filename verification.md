@@ -16,10 +16,12 @@ tfsec はセキュリティチェックツールのため、コードが完成�
 ### エラー検出例
 terraform validate の実行時に検出されたエラー例を記載。
 - tagsブロックでの「＝」記載忘れ
-- RDSリソースに cidr_id を記載
+- ALB/EC2/RDSリソースに vpc_id を記載
 - multi-az の誤記載（正：multi_az）
-- リソース別のSubnet指定ミス<br>
+- リソース別のSubnet 指定ミス<br>
 (subnet_id/subnets/subnet_ids)
+- リソース別のSecurity Group 指定ミス<br>
+(security_groups/vpc_security_group_ids)
 
 ## 各リソースの疎通検証
 各リソースのルーティングごとに適した方法で疎通確認を実施。

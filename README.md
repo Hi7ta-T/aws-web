@@ -42,13 +42,16 @@ VPC内の各サービスの比較、選定理由はこちら<br>
 運用コストの増加と引き換えにAZ障害時の可用性を確保した。<br>
 
 ## Terraform(IaC)
-コードのレビュー方法、ならびにリソースの疎通確認結果はこちら<br>
-[コードレビュー、検証結果](verification.md)
+### セルフレビュー、リソースの構築ならびに疎通確認
+コードのセルフレビュー方法、ならびにリソースの疎通確認結果はこちら<br>
+[セルフレビュー、検証結果](verification.md)
 <br>
 <br>
-VPC内リソースのみIaC化し、リソースの疎通確認を実施。
+### 現在のIaC化状況
+VPC内リソースのIaC化が完了。
 今後はCloudWatch Alarm、SNS、Route 53といったVPC外リソースのIaC化を予定している。
 
+- IaC化済
 | リソース名 | ファイル| 
 |:-----:|:-----:|
 | VPC | [vpc.tf](terraform/vpc.tf)| 
@@ -60,6 +63,14 @@ VPC内リソースのみIaC化し、リソースの疎通確認を実施。
 | ALB | [alb.tf](terraform/alb.tf) |
 | EC2 | [ec2.tf](terraform/ec2.tf)|
 | RDS | [rds.tf](terraform/rds.tf)|
+
+
+- IaC化中
+| リソース名 | ファイル| 
+|:-----:|:-----:|
+| Route 53 | [route53.tf](terraform/.tf)| 
+| SNS | [sns.tf](terraform/.tf)|
+| CloudWatch<br>(Alarm) | [cloudwatch.tf](terraform/.tf)|
 
 ## 本成果物のNW構成図
 ![NW構成図](docs/aws-network.png)
@@ -73,7 +84,6 @@ CloudWatch AlarmとSNSを連携させて<br>
 <br>
 運用設計書はこちら<br>
 [運用設計書](trouble-shooting.md)
-
 
 ## 構築状況と今後の展望
 TerraformでVPC内リソースのIaC化が完了し、コードレビューおよび各リソース毎の疎通確認を行っている。<br>

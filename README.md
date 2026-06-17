@@ -67,9 +67,9 @@ IaC化済<br>
 IaC化中<br>
 | リソース名 | ファイル| 
 |:-----:|:-----:|
-| Route 53 | [route53.tf](terraform/.tf)| 
-| SNS | [sns.tf](terraform/.tf)|
-| CloudWatch<br>(Alarm) | [cloudwatch.tf](terraform/.tf)|
+| Route 53 | [route53.tf](terraform/route53.tf)| 
+| SNS | [sns.tf](terraform/sns.tf)|
+| CloudWatch<br>(Alarm) | [cloudwatch.tf](terraform/cloudwatch.tf)|
 
 ## 本成果物のNW構成図
 ![NW構成図](docs/aws-network.png)

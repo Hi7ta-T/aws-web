@@ -1,4 +1,5 @@
 ## セルフレビュー、検証結果
+
 ### セルフレビュー手順
 目視でのコード確認後、以下の手順でセルフレビューを行った。
 1. terraform fmt<br>
@@ -16,7 +17,8 @@ terraform validate の実行時に検出されたエラー例を記載。
 - tagsブロックでの「＝」記載忘れ
 - RDSリソースに cidr_id を記載
 - multi-az の誤記載(正：multi_az）
-- subnet_id/subnets/subnet_ids の違い
+- リソース別のSubnet指定ミス<br>
+(subnet_id/subnets/subnet_ids)
 
 ## 各リソースの疎通検証
 各リソースのルーティングごとに適した方法で疎通確認を実施。

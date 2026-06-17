@@ -9,7 +9,7 @@ resource "aws_db_instance" "aws-rds" {
   db_subnet_group_name = aws_db_subnet_group.subnet-group.id
   engine               = "mysql"
   allocated_storage    = 100
-  secutity_groups      = [aws_security_group.rds_sg.id]
+  security_groups      = [aws_security_group.rds_sg.id]
   multi_az             = true
 
   tags = {

@@ -51,7 +51,7 @@ VPC内の各サービスの比較、選定理由はこちら<br>
 VPC内リソースのIaC化が完了。
 今後はCloudWatch Alarm、SNS、Route 53といったVPC外リソースのIaC化を予定している。
 
-IaC化済<br>
+- IaC化済<br>
 | リソース名 | ファイル| 
 |:-----:|:-----:|
 | VPC | [vpc.tf](terraform/vpc.tf)| 
@@ -65,7 +65,7 @@ IaC化済<br>
 | RDS | [rds.tf](terraform/rds.tf)|
 
 
-IaC化中<br>
+- IaC化中<br>
 | リソース名 | ファイル| 
 |:-----:|:-----:|
 | Route 53 | [route53.tf](terraform/.tf)| 

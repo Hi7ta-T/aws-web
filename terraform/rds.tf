@@ -6,7 +6,6 @@ resource "aws_db_subnet_group" "subnet-group" {
 }
 
 resource "aws_db_instance" "aws-rds" {
-  vpc_id               = aws_vpc.main.id
   db_subnet_group_name = aws_db_subnet_group.subnet-group.id
   engine               = "mysql"
   allocated_storage    = 100

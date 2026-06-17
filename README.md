@@ -27,7 +27,7 @@ VPC内の各サービスの比較、選定理由はこちら<br>
 [サービス選定理由](service-selection.md)
 <br>
 <br>
-以下、使用予定を含む技術スタックを記載
+### 技術スタック
 - Linux(サーバー、開発環境)
 - AWS（インフラ構築）
 - Terraform（IaC化)

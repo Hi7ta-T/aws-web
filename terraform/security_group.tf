@@ -23,7 +23,7 @@ resource "aws_security_group" "ec2_sg" {
   ingress {
     from_port       = 80
     to_port         = 80
-    security_groups = aws_security_group.alb_sg.id
+    security_groups = [aws_security_group.alb_sg.id]
     protocol        = "tcp"
   }
 }
@@ -38,7 +38,7 @@ resource "aws_security_group" "rds_sg" {
   ingress {
     from_port       = 3306
     to_port         = 3306
-    security_groups = aws_security_group.ec2_sg.id
+    security_groups = [aws_security_group.ec2_sg.id]
     protocol        = "tcp"
   }
 }

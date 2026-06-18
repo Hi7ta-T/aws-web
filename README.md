@@ -14,13 +14,13 @@ AWSを用いて作成した3層構成のインフラ基盤をTerraformでIaC化�
 <br>
 ### 技術スタック
 - AWS（インフラ構築）
-- Terraform（IaC化)
+- Terraform v1.15.3（IaC化)
 - FastAPI（API構築)
 - Figma（構成図）
 - GitHub（ソースコード管理）
 
 ### 開発環境
-- Ubuntu
+- Debian GNU/Linux 12 (bookworm)
 - Visual Studio Code(エディタ)
 
 ## アーキテクチャ方針

@@ -9,8 +9,9 @@
 - VPC外のサービスとしてはRoute 53,CloudWatch(Alarm),SNSを採用
 <br>
 本ドキュメントはNW構成の説明資料のため<br>
-詳細なサービス選定理由は以下に記載。<br>
-[サービス選定理由](/service-selection.md)
+詳細なサービス選定理由は以下に記載。
+<br>
+[サービス選定理由](service-selection.md)
 
 ### 各サービスのサブネット配置<br>
 - ALB:Public Subnet<br>

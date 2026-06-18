@@ -21,7 +21,7 @@ AWSを用いて作成した3層構成のインフラ基盤をTerraformでIaC化�
 
 ### 開発環境
 - Debian GNU/Linux 12 (bookworm)
-- Visual Studio Code(エディタ)
+- Visual Studio Code 1.118.1
 
 ## アーキテクチャ方針
 運用コストと管理負荷のトレードオフを考慮し、以下の内容で構築した。

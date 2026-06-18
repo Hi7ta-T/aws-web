@@ -11,7 +11,7 @@ resource "aws_db_instance" "aws-rds" {
   allocated_storage      = 100
   vpc_security_group_ids = [aws_security_group.rds_sg.id]
   multi_az               = true
-  instance_class    = "db.t4g.micro"
+  instance_class         = "db.t4g.micro"
   tags = {
     Name = "aws-web-rds"
   }

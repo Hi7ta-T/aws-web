@@ -39,7 +39,7 @@ AWSを用いて作成した3層構成のインフラ基盤をTerraformでIaC化�
 <br>
 ### 現在のIaC化状況
 VPC内リソースのIaC化が完了。
-今後はCloudWatch Alarm、SNS、Route 53といったVPC外リソースのIaC化を予定している。
+今後はCloudWatch Alarms、SNS、Route 53といったVPC外リソースのIaC化を予定している。
 
 IaC化済<br>
 | リソース名 | ファイル| 
@@ -60,7 +60,7 @@ IaC化中<br>
 |:-----:|:-----:|
 | Route 53 | [route53.tf](terraform/route53.tf)| 
 | SNS | [sns.tf](terraform/sns.tf)|
-| CloudWatch<br>(Alarm) | [cloudwatch.tf](terraform/cloudwatch.tf)|
+| CloudWatch<br>(Alarms) | [cloudwatch.tf](terraform/cloudwatch.tf)|
 
 ## NW構成
 ![NW構成図](docs/aws-network.png)
@@ -68,7 +68,7 @@ IaC化中<br>
 [NW構成](design-network.md)
 
 ## 障害時の運用設計
-CloudWatch AlarmとSNSを連携させて<br>
+CloudWatch AlarmsとSNSを連携させて<br>
 障害発生時に通知することで、障害の早期発見と迅速な復旧対応へ繋げている。
 <br>
 <br>

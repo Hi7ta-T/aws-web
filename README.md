@@ -97,6 +97,7 @@ CloudWatch AlarmとSNSを連携させて<br>
 
 ### 今後の展望
 以下、優先順位ごとに記載。
-1. TerraformでVPC外リソース(Route 53,SNS,CloudWatch)のIaC化
+1. TerraformでVPC外リソースのIaC化<br>
+(Route 53,SNS,CloudWatch)
 2. FastAPI(Python)でのAPI構築完了
 3. マルチリージョン化し、Route 53の自動フェイルオーバーでリージョン障害時の可用性を確保

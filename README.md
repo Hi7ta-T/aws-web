@@ -90,7 +90,13 @@ CloudWatch AlarmとSNSを連携させて<br>
 - バックアップ取得(復旧可能な状態を保持)
 
 ## 構築状況と今後の展望
-TerraformでVPC内リソースのIaC化が完了し、コードレビューおよび各リソース毎の疎通確認を行っている。<br>
-並行してFastAPI(Python)を用いたAPI構築を実施中。<br>
-<br>
-将来的にはマルチリージョン化を行うとともに、Route 53の自動フェイルオーバーを使用してリージョン障害時にも可用性を担保する予定である。<br>
+### 現在の構築状況
+- TerraformでVPC内リソースをIaC化。<br>
+コードのセルフレビューおよび、リソース毎の疎通検証を実施。<br>
+- FastAPI(Python)を用いたAPI構築を開始
+
+### 今後の展望
+以下、優先順位ごとに記載。
+1. TerraformでVPC外リソース(Route 53,SNS,CloudWatch)のIaC化
+2. FastAPI(Python)でのAPI構築完了
+3. マルチリージョン化し、Route 53の自動フェイルオーバーでリージョン障害時の可用性を確保

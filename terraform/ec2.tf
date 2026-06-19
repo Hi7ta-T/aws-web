@@ -14,7 +14,7 @@ resource "aws_instance" "aws-ec2-az1" {
   subnet_id              = aws_subnet.private-1a.id
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
   ami                    = data.aws_ami.ami.id
-  instance_type          = "t3.micro"
+  instance_type          = "t4g.micro"
 
   tags = {
     Name = "aws-ec2-az1"

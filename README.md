@@ -42,7 +42,7 @@ AWSを用いて作成した3層構成のインフラ基盤をTerraformでIaC化�
 [セルフレビュー、検証結果](verification.md)
 <br>
 ### 現在のIaC化状況
-3層構成のインフラ基盤に関わるリソースのIaC化が完了。
+3層構成のNW通信に関わるリソースのIaC化が完了。<br>
 今後はCloudWatch Alarms、SNS、Route 53といったVPC外リソースのIaC化を予定している。
 
 IaC化済<br>

@@ -16,7 +16,7 @@ AWSを用いて作成した3層構成のインフラ基盤をTerraformでIaC化�
 - AWS（インフラ構築）
 - Terraform v1.15.3（IaC化)
 - FastAPI（API構築)
-- Figma（構成図）
+- Figma（構成図デザイン）
 - GitHub（ソースコード管理）
 
 ### 開発環境
@@ -40,7 +40,6 @@ AWSを用いて作成した3層構成のインフラ基盤をTerraformでIaC化�
 ## Terraform(IaC)
 セルフレビュー方法、ならびにリソースの疎通確認結果はこちら<br>
 [セルフレビュー、検証結果](verification.md)
-<br>
 <br>
 ### 現在のIaC化状況
 VPC内リソースのIaC化が完了。

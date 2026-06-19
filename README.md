@@ -43,7 +43,7 @@ AWSを用いて作成した3層構成のインフラ基盤をTerraformでIaC化�
 <br>
 ### 現在のIaC化状況
 インフラ基盤となる3層構成(ALB/EC2/RDS)に関わる主要リソースのIaC化が完了。<br>
-今後はCloudWatch Alarms、SNS、Route 53といったVPC外リソースのIaC化を予定している。
+今後はCloudWatch Alarms、SNS、Route 53といったVPC外リソースのIaC化を予定。
 
 IaC化済<br>
 | リソース名 | ファイル| 

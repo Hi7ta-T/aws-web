@@ -32,6 +32,11 @@ AWSを用いて作成した3層構成のインフラ基盤をTerraformでIaC化�
 - NAT GatewayをAZごとに分割配置<br>
 運用コストの増加と引き換えにAZ障害時の可用性を確保した。<br>
 
+## NW構成
+![NW構成図](docs/aws-network.png)
+詳細なNW構成はこちら<br>
+[NW構成](design-network.md)
+
 ## Terraform(IaC)
 セルフレビュー方法、ならびにリソースの疎通確認結果はこちら<br>
 [セルフレビュー、検証結果](verification.md)
@@ -61,11 +66,6 @@ IaC化中<br>
 | Route 53 | [route53.tf](terraform/route53.tf)| 
 | SNS | [sns.tf](terraform/sns.tf)|
 | CloudWatch<br>(Alarms) | [cloudwatch.tf](terraform/cloudwatch.tf)|
-
-## NW構成
-![NW構成図](docs/aws-network.png)
-詳細なNW構成はこちら<br>
-[NW構成](design-network.md)
 
 ## 障害時の運用設計
 CloudWatch AlarmsとSNSを連携させて<br>

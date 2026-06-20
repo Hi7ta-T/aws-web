@@ -29,12 +29,14 @@ terraform validate の実行時に頻繁に検出されたエラー例を記載�
 (security_groups , vpc_security_group_ids)
 
 ## 各リソースの疎通検証
-今回は可用性を意識して2AZ構造でEC2とNAT Gatewayを分割配置して構築しているため、AZ毎に各リソースの通信経路に適した方法で疎通検証を行った。(外部 → ALB を除く)
+可用性を意識して2AZ構造でEC2とNAT Gatewayを分割配置して構築しているため、AZ毎に各リソースの通信経路に適した方法で疎通検証を行った。(外部 → ALB を除く)
 
-- 外部 → ALB
-- ALB → EC2(ap-northeast-1a)
-- ALB → EC2(ap-northeast-1c)
-- EC2 → RDS(ap-northeast-1a)
-- EC2 → RDS(ap-northeast-1c)
-- EC2 → NAT Gateway → Internet<br>(ap-northeast-1a)
-- EC2 → NAT Gateway → Internet<br>(ap-northeast-1c)
+| 通信経路 | AZ |
+|:-----:|:-----:|
+| 外部 → ALB |  |
+| ALB → EC2 | ap-northeast-1a |
+| ALB → EC2 | ap-northeast-1c |
+| EC2 → RDS | ap-northeast-1a |
+| EC2 → RDS | ap-northeast-1c |
+| EC2 → NAT Gateway <br>→ Internet | ap-northeast-1a |
+| EC2 → NAT Gateway <br>→ Internet |ap-northeast-1c |

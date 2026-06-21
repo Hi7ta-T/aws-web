@@ -15,6 +15,7 @@ resource "aws_instance" "aws-ec2-az1" {
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
   ami                    = data.aws_ami.ami.id
   instance_type          = "t4g.micro"
+# aws_instance_profile =
 
   tags = {
     Name = "aws-ec2-az1"
@@ -26,6 +27,7 @@ resource "aws_instance" "aws-ec2-az2" {
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
   ami                    = data.aws_ami.ami.id
   instance_type          = "t4g.micro"
+# aws_instance_profile =
 
   tags = {
     Name = "aws-ec2-az2"

@@ -78,9 +78,9 @@ Multi-AZ構成の使用時には設定の有効化が必要となるRDSを採用
 | Apache HTTP Server | 実績豊富、既存システムで多用 | 
 | Microsoft Internet<br>Information services | Windows専用 | 
 
-- 今回のEC2で使用するAPIは Amazon Linux 2023 のため、Windows専用のWebサーバーであるMicrosoft Internet Information servicesは適さない。
+- 今回のEC2で使用するAPIは Amazon Linux 2023 のため、Windows専用のWebサーバーであるMicrosoft Internet Information servicesは除外した。
 
-- また、EC2のインスタンスタイプが「t3.micro」と小規模であり、API構築としてFastAPI(Python)の使用を予定していることから、軽量かつリバースプロシキとしてリクエストの振り分けが可能なNginxを採用した。
+- また、EC2のインスタンスタイプが「t4g.micro」と小規模であり、API構築としてFastAPI(Python)の使用を予定していることから、軽量かつリバースプロキシとしてリクエストの振り分けが可能なNginxを採用した。
 
 ### 補足：インスタンスタイプ(EC2,RDS)
 | サービス名 | 使用インスタンス |

@@ -1,6 +1,6 @@
 
 ## 本成果物のNW構成
-![NW構成図](docs/aws-network.png)
+![NW構成図](aws-network.png)
 <br>
 
 ### 構成図の概要<br>

@@ -54,9 +54,9 @@ IaC化済<br>
 | Subnet | [subnet.tf](terraform/subnet.tf)|
 | IGW | [igw.tf](terraform/igw.tf)|
 | NAT Gateway | [nat.tf](terraform/nat.tf) |
-| Routing<br>(associationも記載)| [route.tf](terraform/routing.tf)|
+| Routing<br>(association)| [route.tf](terraform/routing.tf)|
 | Security Group | [security_group.tf](terraform/security_group.tf)|
-| IAM<br>(現時点ではSSMのみ) | [iam.tf](terraform/iam.tf)| 
+| IAM<br>(SSM Only) | [iam.tf](terraform/iam.tf)| 
 | ALB | [alb.tf](terraform/alb.tf) |
 | EC2 | [ec2.tf](terraform/ec2.tf)|
 | RDS | [rds.tf](terraform/rds.tf)|

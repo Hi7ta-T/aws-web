@@ -36,11 +36,11 @@ AWSを用いて作成した3層構成のインフラ基盤をTerraformでIaC化�
 ## NW構成
 ![NW構成図](docs/aws-network.png)
 詳細なNW構成はこちら<br>
-[NW構成](design-network.md)
+[NW構成](docs/design-network.md)
 
 ## Terraform(IaC)
 セルフレビュー方法、ならびにリソースの疎通確認結果はこちら<br>
-[セルフレビュー、検証結果](verification.md)
+[セルフレビュー、検証結果](docs/verification.md)
 <br>
 ### 現在のIaC化状況
 インフラ基盤となる3層構成(ALB/EC2/RDS)に関わる主要リソースのIaC化が完了。<br>
@@ -75,7 +75,7 @@ CloudWatch AlarmsとSNSを連携させて<br>
 <br>
 <br>
 運用設計書はこちら<br>
-[運用設計書](trouble-shooting.md)
+[運用設計書](docs/trouble-shooting.md)
 
 ## 開発記録
 2026年3月から成果物を検討開始。<br>

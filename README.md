@@ -50,12 +50,13 @@ IaC化済<br>
 | リソース名 | ファイル| 
 |:-----:|:-----:|
 | Provider | [provider.tf](terraform/provider.tf)| 
+| Subnet | [subnet.tf](terraform/subnet.tf)|
+| IAM<br>(SSMのみ記載) | [iam.tf](terraform/.tf)| 
+| Routing<br>(associationも記載)| [route.tf](terraform/routing.tf)|
+| Security Group | [security_group.tf](terraform/security_group.tf)|
 | VPC | [vpc.tf](terraform/vpc.tf)| 
 | IGW | [igw.tf](terraform/igw.tf)|
 | NAT Gateway | [nat.tf](terraform/nat.tf) |
-| Subnet | [subnet.tf](terraform/subnet.tf)|
-| Routing<br>(associationも記載)| [route.tf](terraform/routing.tf)|
-| Security Group | [security_group.tf](terraform/security_group.tf)|
 | ALB | [alb.tf](terraform/alb.tf) |
 | EC2 | [ec2.tf](terraform/ec2.tf)|
 | RDS | [rds.tf](terraform/rds.tf)|

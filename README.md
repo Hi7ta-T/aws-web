@@ -13,7 +13,7 @@ AWSを用いて作成した3層構成のインフラ基盤をTerraformでIaC化�
 [各サービスの選定理由](service-selection.md)
 <br>
 ### 技術スタック
-- AWS（インフラ構築）
+- AWS（クラウド）
 - Terraform v1.15.3（IaC化)
 - Nginx(Webサーバー/リバースプロキシ)
 - FastAPI（API構築)
@@ -102,5 +102,5 @@ CloudWatch AlarmsとSNSを連携させて<br>
 1. TerraformでVPC外リソースのIaC化<br>
 (Route 53,SNS,CloudWatch)
 2. FastAPI(Python)でのAPI構築完了
-3. アプリケーションをマルチリージョン化
+3. アプリケーションのマルチリージョン化を検討
 4. Route 53の自動フェイルオーバーでリージョン障害時の可用性を確保

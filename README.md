@@ -48,6 +48,7 @@ AWSを用いて作成した3層構成のインフラ基盤をTerraformでIaC化�
 IaC化済<br>
 | リソース名 | ファイル| 
 |:-----:|:-----:|
+| Provider | [provider.tf](terraform/provider.tf)| 
 | VPC | [vpc.tf](terraform/vpc.tf)| 
 | IGW | [igw.tf](terraform/igw.tf)|
 | NAT Gateway | [nat.tf](terraform/nat.tf) |

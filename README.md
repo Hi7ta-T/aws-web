@@ -15,6 +15,7 @@ AWSを用いて作成した3層構成のインフラ基盤をTerraformでIaC化�
 ### 技術スタック
 - AWS（インフラ構築）
 - Terraform v1.15.3（IaC化)
+- Nginx(Webサーバー/リバースプロキシ)
 - FastAPI（API構築)
 - Figma（構成図デザイン）
 - GitHub（ソースコード管理）

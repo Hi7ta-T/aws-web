@@ -1,6 +1,6 @@
 # Trust_policy
-resource "aws_iam_role" "ec2-iam" {
-    name = "ec2_iam"
+resource "aws_iam_role" "ec2-role" {
+    name = "ec2_role"
     assume_role_policy = jsonencode ({
         Version = "2012-10-17"
         Statement [{
@@ -14,8 +14,9 @@ resource "aws_iam_role" "ec2-iam" {
     }
 
 # Permission_policy
-resource "aws_iam_role_policy_attachment" "ec2-iam" 
-    assume_role_policy = jsonencode ({
+resource "aws_iam_policy" "ec2-policy" 
+name = "ec2_policy"
+policy = jsonencode ({
         Version = "2012-10-17"
         Statement [{
             Effect = "Allow"

@@ -40,3 +40,8 @@ terraform validate の実行時に頻繁に検出されたエラー例を記載�
 | EC2 → RDS | ap-northeast-1c |
 | EC2 → NAT Gateway <br>→ Internet | ap-northeast-1a |
 | EC2 → NAT Gateway <br>→ Internet |ap-northeast-1c |
+
+### 外部 → ALB
+### ALB → EC2
+### EC2 → RDS
+### EC2 → NAT Gateway → Internet

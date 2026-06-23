@@ -29,4 +29,4 @@ policy = jsonencode ({
     }
 
 # instance_profile
-resource "aws_iam_instance_profile" "ec2-iam"
+resource "aws_iam_role_policy_attachment" "ec2-iam"

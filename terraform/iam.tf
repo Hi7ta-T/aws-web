@@ -1,4 +1,4 @@
-# Trust_policy
+# Role
 resource "aws_iam_role" "ec2-role" {
     name = "ec2_role"
     assume_role_policy = jsonencode ({
@@ -13,20 +13,6 @@ resource "aws_iam_role" "ec2-role" {
         })
     }
 
-# Permission_policy
-resource "aws_iam_policy" "ec2-policy" 
-name = "ec2_policy"
-policy = jsonencode ({
-        Version = "2012-10-17"
-        Statement [{
-            Effect = "Allow"
-            Principal = {
-                Service = "ec2.amazonaws.com"
-             }
-                Action = ""
-            }]
-        })
-    }
-
-# instance_profile
+# Policy = AWS標準ポリシー
+# attachment
 resource "aws_iam_role_policy_attachment" "ec2-iam"

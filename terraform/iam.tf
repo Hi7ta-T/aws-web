@@ -1,4 +1,4 @@
-# Role
+# role
 resource "aws_iam_role" "ec2-role" {
     name = "ec2_role"
     assume_role_policy = jsonencode ({
@@ -13,6 +13,15 @@ resource "aws_iam_role" "ec2-role" {
         })
     }
 
-# Policy = AWS標準ポリシー
+# policy = AWS標準ポリシー
 # attachment
-resource "aws_iam_role_policy_attachment" "ec2-iam"
+resource "aws_iam_role_policy_attachment" "ec2-iam" {
+    role = aws_iam_role.ec2-role.name
+    policy_arn = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
+    }
+
+# instance_profile
+resource "aws_iam_instance_profile" "ec2-profile" {
+    name = "ec2_instance"
+    role = aws_iam_role.ec2-role.name
+    }

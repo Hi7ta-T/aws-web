@@ -49,5 +49,10 @@ TLSハンドシェイクを含むHTTPS通信（クライアント⇔ALB間）の
 EC2の操作・接続手段としてSSM(AWS Systems Manager)を使用。<br>
 これにより、22ポート(SSH)の開放と踏み台サーバーが不要となる一方で通信経路の確保が必要となった。
 
+| 名称 | コスト面 | 作成負荷 |
+|:-----:|:-----:|:-----:|
+| NAT Gateway | △<br>従量課金 | ◎<br>既に構築済 |
+| VPC Endpoint | ◎<br>VPC内通信は費用なし | ×<br>一から構築が必要 |
 
-経路としてNAT Gateway とVPC Endpoint を検討。
+
+経路としてNAT Gateway とVPC Endpoint を比較して検討。

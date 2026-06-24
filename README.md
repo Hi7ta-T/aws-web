@@ -41,7 +41,6 @@ AWSを用いて作成した3層構成のインフラ基盤をTerraformでIaC化�
 設計の軸として「コスト」を置いていたが、「設計理解」として学習を深めるためにNAT Gatewayの分割配置、ならびにRDSのMulti-AZを実構築することを優先して2AZ構成とした。
 
 ## NW構成
-![NW構成図](docs/aws-network.png)
 詳細なNW構成はこちら<br>
 [NW構成](docs/design-network.md)
 

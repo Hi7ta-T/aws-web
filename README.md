@@ -113,7 +113,7 @@ CloudWatch AlarmsとSNSを連携させて<br>
 1. TerraformでVPC外リソースのIaC化<br>
 (Route 53,SNS,CloudWatch)
 2. SSMの通信経路変更<br>
-(NAT GatewayからVPC Endpointに変更)
+(NAT Gateway → VPC Endpoint)
 3. FastAPI(Python)でのAPI構築
 4. アプリケーションのマルチリージョン化
 5. Route 53の自動フェイルオーバー有効化

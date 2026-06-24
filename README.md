@@ -41,6 +41,11 @@ AWSを用いて作成した3層構成のインフラ基盤をTerraformでIaC化�
 設計の軸として「コスト」を置いていたが、「設計理解」として学習を深めるためにNAT Gatewayの分割配置、ならびにRDSのMulti-AZを実構築することを優先して2AZ構成とした。
 
 ## NW構成
+2AZの3層構成(ALB,EC2,RDS)を単一リージョンで作成。
+- 1AZにつきPublic Subnetを1個とPrivate Subnetを2個配置
+- VPC外のサービスとしてRoute 53,CloudWatch(Alarm),SNSを採用
+- EC2の実行環境はSSMを経由して使用するため22ポート(SSH)の開放不要
+
 詳細なNW構成はこちら<br>
 [NW構成](docs/design-network.md)
 

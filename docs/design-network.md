@@ -56,7 +56,7 @@ EC2の操作・接続手段としてSSM(AWS Systems Manager)を使用。<br>
 
 通信経路としてNAT Gateway とVPC Endpoint を比較して検討を行った。<br>
 本成果物の作成軸として「コスト」を重視しており、コスト面を考慮すると同VPC内での通信は費用がかからないVPC Endpointの使用が適している。<br>
-しかし、既にEC2の外部接続用でIaC化が完了していたNAT Gatewayとは違い、VPC Endpointは一からの構築が必要となる。<br>
+しかし、既にVPC内リソースのアウトバウンド通信用としてIaC化が完了していたNAT Gatewayとは違い、VPC Endpointは一からの構築が必要となる。<br>
 <br>
 今回は構築したEC2リソースにNginxを入れてcurlで疎通検証をすることが優先事項であったため、追加の構築を必要としないNAT Gatewayを選択。<br>
-だが、NAT Gatewayは従量課金制のリソースであり、コスト面において最適化出来ているとは言えない。VPC Endpointへの変換は、今度の展望の中でも優先的な実施事項となる。
+だが、NAT Gatewayは従量課金制のリソースであり、コスト面において最適化出来ているとは言えない。VPC Endpointへの変換は、今度の展望の中でも優先的に実施する事項である。

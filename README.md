@@ -122,7 +122,7 @@ CloudWatch AlarmsとSNSを連携させて<br>
 ロードバランサー、サーバー、DB、ならびにインスタンスタイプとWebサーバーを比較した上で選定理由を記載。
 
 - [NW構成](docs/design-network.md)<br>
-セキュリティを鑑みたサブネット配置やCIDR、SGについて記載。補足としてSSMを用いたEC2接続について説明。
+セキュリティを鑑みたサブネット配置やCIDR、SGについて記載。補足としてSSM経由でのEC2接続について説明。
 
 - [セルフレビュー、検証結果](docs/verification.md)<br>
 前半はterraform fmt / validate やTFLintを用いたセルフレビューと頻出したエラーを記載。後半は作成したコードで行った経路別の疎通検証結果を記録している。

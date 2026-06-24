@@ -116,3 +116,16 @@ CloudWatch AlarmsとSNSを連携させて<br>
 3. FastAPI(Python)でのAPI構築
 4. アプリケーションのマルチリージョン化
 5. Route 53の自動フェイルオーバー有効化
+
+### ドキュメントへのリンク一覧
+- [各サービスの選定理由](docs/service-selection.md)<br>
+ロードバランサー、サーバー、DB、ならびにインスタンスタイプとWebサーバーを比較した上で選定理由を記載。
+
+- [NW構成](docs/design-network.md)<br>
+セキュリティを鑑みたサブネット配置やCIDR、SGについて記載。補足としてSSMを用いたEC2接続について説明。
+
+- [セルフレビュー、検証結果](docs/verification.md)<br>
+前半はterraform fmt / validate やTFLintを用いたセルフレビューと頻出したエラーを記載。後半は作成したコードで行った経路別の疎通検証結果を記録している。
+
+- [運用設計書](docs/trouble-shooting.md)<br>
+インスタンス障害、AZ障害、リージョン障害時の現段階の障害検知と可用性を確保するための対策を記載。補足としてアプリケーション障害時の対応も述べている。

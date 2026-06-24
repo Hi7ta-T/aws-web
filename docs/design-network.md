@@ -3,12 +3,6 @@
 ![NW構成図](aws-network.png)
 <br>
 
-### 概要
-2AZの3層構成(ALB,EC2,RDS)を単一リージョンで作成。
-- 1AZにつきPublic Subnetを1個とPrivate Subnetを2個配置
-- VPC外のサービスとしてRoute 53,CloudWatch(Alarm),SNSを採用
-- EC2の実行環境はSSMを経由して使用するため22ポート(SSH)の開放不要
-
 ### 目次
 以下の順でNWの構成説明を記載。
 

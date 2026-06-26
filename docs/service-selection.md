@@ -1,16 +1,13 @@
 ## 各サービスの比較、選定理由
 以下の順番で選定理由を説明。
 
-- ロードバランサー <br>
-→ ALB
-- サーバー <br>
-→ EC2
-- DB <br>
-→ RDS
+- ロードバランサー → ALB
+- サーバー → EC2
+- DB → RDS
 - VPC外リソース <br>
 → Route 53,CloudWatch,SNS
-- (補足)Webサーバー <br>
-→ Nginx
+- (補足)Webサーバー<br>
+  → Nginx
 - (補足)インスタンスタイプ <br>
 → EC2,RDS ともに t4g.micro
 - (補足)EC2の操作・接続手段<br>

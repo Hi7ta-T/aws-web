@@ -5,8 +5,9 @@
 ## 現在の構築状況
 - TerraformでVPC内リソースをIaC化<br>
 コードのセルフレビューおよび、リソース毎の疎通検証を実施。<br>
-- FastAPI(Python)を用いたAPI構築を開始
-- IAM RoleでのSSMの接続対応(IaC化済)
+- FastAPI(Python)を用いたAPI構築に着手
+- IAM RoleでのSSM接続対応<br>
+ (IaC化、検証済)
 
 ## アーキテクチャ方針
 ### アーキテクチャ方針図

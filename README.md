@@ -1,27 +1,12 @@
 
 ## 概要
-地域毎の治安や利便性を可視化し、住環境を選択する際の一助とすることを狙いとして、各地域の居住者の口コミの内容や数量を管理するWebアプリケーションを作成。<br>
+地域毎の治安や利便性を可視化し、住環境を選択する際の一助とすることを狙いとして、各地域の居住者の口コミの内容や数量を管理するWebアプリケーションを作成。
+
 ## 現在の構築状況
 - TerraformでVPC内リソースをIaC化<br>
 コードのセルフレビューおよび、リソース毎の疎通検証を実施。<br>
 - FastAPI(Python)を用いたAPI構築を開始
 - IAM RoleでのSSMの接続対応(IaC化済)
-
-## 使用技術一覧
-インフラ構成要素の比較、選定理由はこちら<br>
-[各サービスの比較、選定理由](docs/service-selection.md)
-<br>
-### 技術スタック
-- AWS（クラウド）
-- Terraform v1.15.3（IaC化)
-- Nginx(Webサーバー/リバースプロキシ）
-- FastAPI（API構築)
-- Figma（構成図デザイン）
-- GitHub（ソースコード管理）
-
-### 開発環境
-- Debian GNU/Linux 12 (bookworm)
-- Visual Studio Code 1.118.1
 
 ## アーキテクチャ方針
 ### アーキテクチャ方針図
@@ -41,6 +26,22 @@
 - デメリット：運用コストの増加
 
 設計の軸として「コスト」を置いていたが、「設計理解」として学習を深めるためにNAT Gatewayの分割配置、ならびにRDSのMulti-AZを実構築することを優先して2AZ構成とした。
+
+## 使用技術一覧
+インフラ構成要素の比較、選定理由はこちら<br>
+[各サービスの比較、選定理由](docs/service-selection.md)
+<br>
+### 技術スタック
+- AWS（クラウド）
+- Terraform v1.15.3（IaC化)
+- Nginx(Webサーバー/リバースプロキシ）
+- FastAPI（API構築)
+- Figma（構成図デザイン）
+- GitHub（ソースコード管理）
+
+### 開発環境
+- Debian GNU/Linux 12 (bookworm)
+- Visual Studio Code 1.118.1
 
 ## NW構成
 2AZの3層構成(ALB,EC2,RDS)を単一リージョンで作成。

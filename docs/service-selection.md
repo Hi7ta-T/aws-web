@@ -56,7 +56,7 @@ Multi-AZ構成の使用時には設定の有効化が必要となるRDSを採用
 ### VPC外リソース
 | 名称 | サービス内容 | 特徴 |
 |:-----:|:-----:|:-----:|
-| Route 53 | 名前解決 | ドメイン名からIP変換を行う <br> DNSヘルスチェックで使用可能なリージョンにIP変換 |
+| Route 53 | 名前解決 | ドメイン名からIP変換を行う <br> DNSヘルスチェックで正常なエンドポイントにIP変換 |
 | CloudWatch | メトリクス監視 | 各リソースのメトリクスを監視 <br> 閾値を超えた際はAlarmからSNSへ異常通知 |
 | SNS | イベント通知 | CloudWatch Alarm からの異常通知を通知先へ連絡 |
 - 今回は単一リージョンの作成になるが、今後規模拡大を想定した際にはリージョン障害時にも
@@ -76,9 +76,9 @@ Multi-AZ構成の使用時には設定の有効化が必要となるRDSを採用
 |:-----:|:-----:|
 | Nginx | 軽量、リバースプロキシが得意 | 
 | Apache HTTP Server | 実績豊富、既存システムで多用 | 
-| Microsoft Internet<br>Information services | Windows専用 | 
+| Internet Information Services | Windows専用 | 
 
-- 今回のEC2で使用するAPIは Amazon Linux 2023 のため、Windows専用のWebサーバーであるMicrosoft Internet Information servicesは除外した。
+- 今回のEC2で使用するAPIは Amazon Linux 2023 のため、Windows専用のWebサーバーであるInternet Information servicesは除外した。
 
 - また、EC2のインスタンスタイプが「t4g.micro」と小規模であり、API構築としてFastAPI(Python)の使用を予定していることから、軽量かつリバースプロキシとしてリクエストの振り分けが可能なNginxを採用した。
 

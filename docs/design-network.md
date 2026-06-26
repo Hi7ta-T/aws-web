@@ -67,7 +67,7 @@ IAM Roleで一時認証情報を付与して、SSM(AWS Systems Manager)経由で
 | VPC Endpoint | ◎<br>VPC内通信は安価 | ×<br>一から構築が必要 |
 
 通信経路としてNAT Gateway とVPC Endpoint を比較して検討を行った。<br>
-- 本成果物の作成軸として「コスト」を重視しており、コスト面を考慮すると同VPC内での通信は費用がかからないVPC Endpointの使用が適している。<br>
+- 本成果物の作成軸として「コスト」を重視しており、コスト面を考慮すると同VPC内での通信は費用を抑えられるVPC Endpointの使用が適している。<br>
 - しかし、既にVPC内リソースのアウトバウンド通信用としてIaC化が完了していたNAT Gatewayとは違い、VPC Endpointは一からの構築が必要となる。<br>
 
 今回は構築したEC2リソースにNginxを入れてcurlで疎通検証をすることが優先事項であったため、追加構築不要のNAT Gatewayを選択。<br>

@@ -8,7 +8,7 @@ AWSを用いて作成した3層構成のインフラ基盤をTerraformでIaC化�
 
 ## 使用技術一覧
 インフラ構成要素の比較、選定理由はこちら<br>
-[各サービスの選定理由](docs/service-selection.md)
+[各サービスの比較、選定理由](docs/service-selection.md)
 <br>
 ### 技術スタック
 - AWS（クラウド）

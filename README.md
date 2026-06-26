@@ -36,8 +36,8 @@
 <br>
 ### 技術スタック
 - AWS（クラウド）
-- Terraform v1.15.3（IaC化)
-- Nginx(Webサーバー/リバースプロキシ）
+- Terraform（IaC化)
+- Nginx (Webサーバー/リバースプロキシ）
 - FastAPI（API構築)
 - Figma（構成図デザイン）
 - GitHub（ソースコード管理）

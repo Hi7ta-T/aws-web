@@ -11,7 +11,7 @@
 1. terraform fmt<br>
 コードの書式、ブロック整理
 2. terraform validate<br>
-誤記載やリソース参照ミスをエラーとして検出
+構文ミスやリソース参照の整合性をエラーとして検出
 3. TFLint(terraform Lint)<br>
 コードの品質、ベストプラクティスに関する指摘を検出
 
@@ -40,6 +40,9 @@ terraform validate の実行時に頻繁に検出されたエラー例を記載�
 | EC2 → RDS | ap-northeast-1c |
 | EC2 → NAT Gateway <br>→ Internet | ap-northeast-1a |
 | EC2 → NAT Gateway <br>→ Internet |ap-northeast-1c |
+
+Terraform専用のIAMユーザーを作成し、疎通検証を優先するために一時的にAdministrator Accessを付与。<br>
+IAMは最小権限が推奨されていることから、疎通検証完了後は必要な権限のみを設定予定。
 
 ### 外部 → ALB
 ### ALB → EC2

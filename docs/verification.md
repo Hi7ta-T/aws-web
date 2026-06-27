@@ -11,7 +11,7 @@
 1. terraform fmt<br>
 コードの書式、ブロック整理
 2. terraform validate<br>
-構文ミスやリソース参照の整合性をエラーとして検出
+構文ミスやリソースの整合性をエラーとして検出
 3. TFLint(terraform Lint)<br>
 コードの品質、ベストプラクティスに関する指摘を検出
 4. tfsec(terraform security)<br>

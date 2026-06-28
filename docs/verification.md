@@ -36,6 +36,8 @@ terraform validate の実行時に頻繁に検出されたエラー例を記載�
 | 通信経路 | AZ |
 |:-----:|:-----:|
 | 外部 → ALB | - |
+| 外部 → SSM → EC2 | ap-northeast-1a |
+| 外部 → SSM → EC2 | ap-northeast-1c |
 | ALB → EC2 | ap-northeast-1a |
 | ALB → EC2 | ap-northeast-1c |
 | EC2 → RDS | ap-northeast-1a |
@@ -48,6 +50,7 @@ IAMは最小権限が推奨されていることから、疎通検証完了後�
 
 ### 外部 → ALB
 Nginxを追加したEC2の実行環境でcurlコマンドを行い、外部からEC2までの疎通を検証する経路で確認。
+### 外部 → SSM → EC2
 ### ALB → EC2
 Nginxを追加したEC2の実行環境でcurlコマンドを行い、AZごとに配置したEC2の応答の有無で確認。
 ### EC2 → RDS

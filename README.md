@@ -55,7 +55,7 @@
 [NW構成](docs/design-network.md)
 
 ## Terraform(IaC)
-terraform fmt / validateとTFLintでセルフレビューを実施。疎通検証後にtfsecでのセキュリティチェックを予定している。
+terraform fmt / validateとTFLintでセルフレビューを実施。疎通検証後にtfsecでのセキュリティチェックを予定している。<br>
 <br>
 セルフレビュー方法、ならびにリソースの疎通検証結果はこちら(現在作成中)<br>
 [セルフレビュー、検証結果](docs/verification.md)

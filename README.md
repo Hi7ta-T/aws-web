@@ -6,10 +6,9 @@
 
 ## 現在の構築状況
 - TerraformでVPC内リソースをIaC化<br>
-コードのセルフレビューおよび、リソース毎の疎通検証を実施済<br>
-- FastAPI(Python)を用いたAPI構築に着手
+コードのセルフレビューおよび、リソース毎の疎通検証を実施中<br>
 - IAM RoleでのSSM接続対応<br>
- (IaC化、疎通検証済)
+ (IaC化、疎通検証実施中)
 
 ## アーキテクチャ方針
 ### アーキテクチャ方針図
@@ -56,7 +55,9 @@
 [NW構成](docs/design-network.md)
 
 ## Terraform(IaC)
-セルフレビュー方法、ならびにリソースの疎通検証結果はこちら<br>
+terraform fmt / validateとTFLintでセルフレビューを実施。疎通検証後にtfsecでのセキュリティチェックを予定している。
+<br>
+セルフレビュー方法、ならびにリソースの疎通検証結果はこちら(現在作成中)<br>
 [セルフレビュー、検証結果](docs/verification.md)
 <br>
 ### 現在のIaC化状況
@@ -88,8 +89,6 @@ IaC化中<br>
 
 ## 障害時の運用設計
 CloudWatch AlarmsとSNSを連携させて障害発生時に通知することで、障害の早期発見と迅速な復旧対応へ繋げている。<br>
-<br>
-なお、現時点でのCloudWatch Alarmsのメトリクス閾値は疎通検証時のログから算出した暫定値であるため、今後の構築とともに変更を予定している。<br>
 <br>
 運用設計書はこちら<br>
 [運用設計書](docs/trouble-shooting.md)

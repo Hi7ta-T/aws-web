@@ -99,7 +99,8 @@ IaC化中<br>
 | CloudWatch<br>(Alarms) | [cloudwatch.tf](terraform/cloudwatch.tf)|
 
 ## 障害時の運用設計
-CloudWatch AlarmsとSNSを連携させて障害発生時に通知することで、障害の早期発見と迅速な復旧対応へ繋げている。<br>
+疎通確認時のメトリクスを参考にAlarm発火の閾値を設定。<br>
+CloudWatch AlarmsとSNSを連携させて障害発生時に通知することで、障害の早期発見と迅速な復旧対応へと連携。<br>
 <br>
 運用設計書はこちら<br>
 [運用設計書](docs/trouble-shooting.md)

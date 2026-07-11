@@ -25,10 +25,10 @@ CloudWatch Alarm の発火条件となるメトリクス閾値については、
 ### 障害の発生から検知までのフロー
 1. EC2インスタンスに障害が発生<br>
 (ex:EC2停止、OSのフリーズ)
-2. EC2のステータスチェックが異常を検知
-3. CloudWatchの監視メトリクスが閾値超過
-4. CloudWatch AlarmでSNSへ異常を連絡
-5. SNSに登録された宛先に異常発生を通知
+2-a. StatusCheckFailed
+2-b. CloudWatchの監視メトリクスが閾値超過
+3. CloudWatch AlarmでSNSへ異常を連絡
+4. SNSに登録された宛先に異常発生を通知
 
 ### 障害後の対応
 1. ALBのヘルスチェックによって、正常なインスタンスにリクエストを送付

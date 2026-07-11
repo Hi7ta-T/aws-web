@@ -10,15 +10,16 @@
 CloudWatch Alarm の発火条件となるメトリクス閾値については、疎通検証時に取得したマトリクスを参考に設定する。<br>
 なお、設定値は初期値のため、実運用を通して最適な閾値に変更していく予定である。<br>
 <br>
-以下、障害別に監視するメトリクスを記載。
-| 障害名 | リソース | 確認する<br>メトリクス | 
+以下、障害別に確認する内容、メトリクスを記載。
+| 障害名 | リソース | 確認内容 | 
 |:-----:|:-----:|:-----:|
 | インスタンス障害 | ALB | TargetResponseTime |
 | インスタンス障害 | EC2 | StatusCheckFailed |
 | AZ障害 | ALB | HealthyHostCount/UnhealthyHostCount |
 | AZ障害 | ALB | TargetResponseTime |
-| リージョン障害 | Route 53 | HealthCheck |
+| リージョン障害 | Route 53 | ヘルスチェック |
 | リージョン障害 | ALB | HealthyHostCount/UnhealthyHostCount |
+| アプリケーション障害 | ALB | ヘルスチェック |
 | アプリケーション障害 | ALB | TargetResponseTime　|
 
 ## インスタンス障害
@@ -28,7 +29,7 @@ CloudWatch Alarm の発火条件となるメトリクス閾値については、
 2. StatusCheckFailedが「1(異常)」を記録
 3. TargetResponseTimeが閾値超過
 4. CloudWatch AlarmでSNSへ異常を連絡<br>
-(2.3の両方を満たすとAlarm発火)
+(2.3の片方を満たすとAlarm発火)
 5. SNSに登録された宛先に異常発生を通知
 
 ### 障害後の対応
@@ -41,11 +42,11 @@ CloudWatch Alarm の発火条件となるメトリクス閾値については、
 ### 障害の発生から検知までのフロー
 1. Availability Zoneに障害が発生<br>
 (ex:停電、ネットワーク機器の故障)
-2. HealthyHostCountが「0」を記録<br>
+2. HealthyHostCountが「1」を記録<br>
 (UnhealthyHostCountが「1」を記録)
 3. TargetResponseTimeが閾値超過
 4. CloudWatch AlarmでSNSへ異常を連絡<br>
-(2.3の両方を満たすとAlarm発火)
+(2.3の片方を満たすとAlarm発火)
 5. SNSに登録された宛先に異常発生を通知
 
 ### 障害後の対応
@@ -62,7 +63,7 @@ RDSは可用性を意識してMulti-AZ構造を採用しているが、障害発
 障害時の検知と今後の可用性確保案について記載した。
 1. リージョンに障害が発生<br>
 (ex:データセンター障害、自然災害による大規模停電)
-2. Route 53のHealthCheckが失敗
+2. Route 53のヘルスチェックが失敗
 3. HealthyHostCountが「0」を記録<br>
 (UnhealthyHostCountが「2」を記録)
 4. CloudWatch AlarmでSNSへ異常を連絡
@@ -79,7 +80,7 @@ RDSは可用性を意識してMulti-AZ構造を採用しているが、障害発
 ### 障害の発生から検知までのフロー
 1. アプリケーションで障害が発生<br>
 (ex:Nginx停止、フロントエンド接続異常)
-2. ALBのHealthCheckが異常を検知
+2. ALBのヘルスチェックが異常を検知
 3. TargetResponseTimeが閾値超過
 4. CloudWatch AlarmでSNSへ異常を連絡
 5. SNSに登録された宛先に異常発生を通知

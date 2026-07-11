@@ -42,7 +42,7 @@ CloudWatch Alarm の発火条件となるメトリクス閾値については、
 1. Availability Zoneに障害が発生<br>
 (ex:停電、ネットワーク機器の故障)
 2. HealthyHostCountが「0」を記録<br>
-または、UnhealthyHostCountが「1」を記録
+またはUnhealthyHostCountが「1」を記録
 3. TargetResponseTimeが閾値超過
 4. CloudWatch AlarmでSNSへ異常を連絡<br>
 (2.3の両方を満たすとAlarm発火)
@@ -64,7 +64,7 @@ RDSは可用性を意識してMulti-AZ構造を採用しているが、障害発
 (ex:データセンター障害、自然災害による大規模停電)
 2. Route 53のHealthCheckが失敗
 3. HealthyHostCountが「0」を記録<br>
-または、UnhealthyHostCountが「2」を記録
+またはUnhealthyHostCountが「2」を記録
 4. CloudWatch AlarmでSNSへ異常を連絡
 5. SNSに登録された宛先に異常発生を通知
 

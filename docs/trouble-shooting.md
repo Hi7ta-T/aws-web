@@ -7,15 +7,18 @@
 - (補足)アプリケーション障害
 
 ## 監視メトリクス
-CloudWatch Alarm の発火条件となるメトリクス閾値については、疎通検証時のメトリクスから決定する予定。<br>
+CloudWatch Alarm の発火条件となるメトリクス閾値については、疎通検証時に取得した。<br>
 <br>
 以下、障害別に監視するメトリクスを記載。
 | 障害名 | リソース | 確認する<br>メトリクス | 
 |:-----:|:-----:|:-----:|
-| インスタンス障害 | ALB | |
-| AZ障害 | ALB | |
-| リージョン障害 | ALB | |
-| アプリケーション障害 | ALB | |
+| インスタンス障害 | ALB | TargetResponseTime |
+| インスタンス障害 | EC2 | StatusCheckFailed |
+| AZ障害 | ALB | HealthyHostCount/UnhealthyHostCount |
+| AZ障害 | ALB | TargetResponseTime |
+| リージョン障害 | Route 53 | HealthCheck |
+| リージョン障害 | ALB | HealthyHostCount/UnhealthyHostCount |
+| アプリケーション障害 | ALB | TargetResponseTime　|
 
 ## インスタンス障害
 ### 障害の発生から検知までのフロー

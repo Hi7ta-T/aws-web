@@ -22,7 +22,6 @@ Terraformを用いてIaC化を実施した。<br>
 インフラ基盤の疎通検証後FastAPI(Python)でAPI構築を予定
 
 ## アーキテクチャ方針
-### アーキテクチャ方針図
 ![アーキテクチャ図](docs/architecture.png)
 
 本成果物の作成軸は「設計理解」と「コスト」である。<br>
@@ -97,6 +96,7 @@ IaC化中<br>
 | Route 53 | [route53.tf](terraform/route53.tf)| 
 | SNS | [sns.tf](terraform/sns.tf)|
 | CloudWatch<br>(Alarms) | [cloudwatch.tf](terraform/cloudwatch.tf)|
+| ACM | [acm.tf](terraform/acm.tf)| 
 
 ## 障害時の運用設計
 疎通確認時のメトリクスを参考にAlarm発火の閾値を設定。<br>
@@ -121,7 +121,7 @@ CloudWatch AlarmsとSNSを連携させて障害発生時に通知することで
 ## 今後の展望
 以下、優先順位ごとに記載。
 1. TerraformでVPC外リソースのIaC化<br>
-(Route 53,SNS,CloudWatch)
+(Route 53,SNS,CloudWatch、ACM)
 2. SSMの通信経路変更<br>
 (NAT Gateway → VPC Endpoint)
 3. FastAPI(Python)でのAPI構築

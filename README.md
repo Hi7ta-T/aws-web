@@ -65,10 +65,6 @@ Terraformを用いてIaC化を実施した。<br>
 
 ## Terraform(IaC)
 terraform fmt / validateとTFLintでセルフレビューを実施。疎通検証後にtfsecでのセキュリティチェックを予定している。<br>
-<br>
-セルフレビュー方法、ならびにリソースの疎通検証結果はこちら(現在作成中)<br>
-[セルフレビュー、検証結果](docs/verification.md)
-<br>
 ### 現在のIaC化状況
 インフラ基盤となる3層構成(ALB/EC2/RDS)に関わる主要リソースのIaC化が完了。<br>
 今後はCloudWatch Alarms、SNS、Route 53といったVPC外リソースのIaC化を予定。
@@ -88,7 +84,6 @@ terraform fmt / validateとTFLintでセルフレビューを実施。疎通検�
 | EC2 | [ec2.tf](terraform/ec2.tf)|
 | RDS | [rds.tf](terraform/rds.tf)|
 
-
 **IaC化中**<br>
 | リソース名 | ファイル| 
 |:-----:|:-----:|
@@ -96,6 +91,11 @@ terraform fmt / validateとTFLintでセルフレビューを実施。疎通検�
 | SNS | [sns.tf](terraform/sns.tf)|
 | CloudWatch<br>(Alarms) | [cloudwatch.tf](terraform/cloudwatch.tf)|
 | ACM | [acm.tf](terraform/acm.tf)| 
+
+<br>
+セルフレビュー方法、リソースの検証方法と疎通結果はこちら(現在作成中)<br>
+
+[セルフレビュー、検証結果](docs/verification.md)
 
 ## 障害時の運用設計
 疎通確認時のメトリクスを参考にAlarm発火の閾値を設定。<br>

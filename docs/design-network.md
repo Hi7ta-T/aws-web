@@ -16,13 +16,13 @@
 | EC2 | Private Subnet |
 | RDS | Private Subnet |
 
-- ALB:Public Subnet<br>
+- **ALB:Public Subnet**<br>
 クライアントからのWeb通信（HTTP/HTTPS）のリクエストを受け入れるため、直接インターネット接続可能なPublic Subnetに配置<br>
 
-- EC2:Private Subnet<br>
+- **EC2:Private Subnet**<br>
 外部接続が不要であり、かつ接続経路を絞ることでセキュリティ性の向上を図るため<br>直接のインターネット接続不可であるPrivate Subnetに配置<br>
 
-- RDS:Private Subnet<br>
+- **RDS:Private Subnet**<br>
 外部接続が不要であり、かつ接続経路を絞ることでセキュリティ性の向上を図るため<br>
 直接のインターネット接続不可であるPrivate Subnetに配置<br>
 
@@ -31,10 +31,10 @@
 |:-----:|:-----:|
 | VPC | /16(約65,000個) |
 | サブネット | /24(約250個) |
-- VPC=/16<br>
+- **VPC=/16**<br>
 今後サービスの拡張で追加のサブネットが必要となった際を考慮して /16 で作成<br>
 
-- サブネット=/24<br>
+- **サブネット=/24**<br>
 現在は各サービスでIP使用数10個未満だが、スケールアウトやサービス拡張に伴う使用量追加を考慮して<br>
 IP使用数を余分に確保するため /24 で作成<br>
 
@@ -45,13 +45,13 @@ IP使用数を余分に確保するため /24 で作成<br>
 | ALB → EC2 | 80=ALB SG |
 | EC2 → RDS | 3306=EC2 SG |
 
-- Internet → ALB（443=0.0.0.0/0）<br>
+- **Internet → ALB（443=0.0.0.0/0)** <br>
 通信傍受の可能性を軽減させて通信の安全性を確保するため、TLSによって通信内容を暗号化したHTTPS通信のみ受信<br>
 
-- ALB → EC2（80＝ALB SG）<br>
+- **ALB → EC2（80＝ALB SG）** <br>
 TLSハンドシェイクを含むHTTPS通信（クライアント⇔ALB間）の終端がALBであり、ALBによって復号が行われることから内部では負荷軽減のためHTTP通信を使用<br>
 受け入れるインバウンド通信をALBのSGのみとし、通信経路を限定することでセキュリティ性を向上<br>
 
-- EC2 → RDS（3306=EC2 SG）<br>
+- **EC2 → RDS（3306=EC2 SG）** <br>
 受け入れるインバウンド通信をEC2のSGのみとすることで、通信経路を限定しセキュリティ性を向上<br>
-今回はMySQLを使用するため、3306ポートを指定<br>
+今回はMySQLを使用するため、3306ポートを指定

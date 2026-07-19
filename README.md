@@ -28,12 +28,12 @@ FastAPI(Python)でのAPI構築に向けて、HTTPメソッドと宛先となるU
 アプリケーションの可用性と設計コストはトレードオフの関係にあるため、作成軸を元に可用性の確保基準を考慮した。
 
 ### リージョン
-単一リージョン(東京,ap-northeast-1)
+**単一リージョン(東京,ap-northeast-1)**
 - メリット：管理コスト低下
 - デメリット：リージョン障害時の可用性確保不可
 
 ### Availability Zone
-2AZ構成(ap-northeast-1a,ap-northeast-1c)
+**2AZ構成(ap-northeast-1a,ap-northeast-1c)**
 - メリット：AZ障害時の可用性確保
 - デメリット：運用コストの増加
 

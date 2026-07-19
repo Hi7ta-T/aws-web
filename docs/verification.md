@@ -50,7 +50,7 @@ terraform validate の実行時に頻繁に検出されたエラー例を記載�
 Terraform専用のIAMユーザーを作成し、疎通検証を優先するために一時的にAdministrator Accessを付与。<br>
 IAMは最小権限が推奨されていることから、疎通検証完了後は必要な権限のみを設定予定。
 
-1. 外部 → ALB
+1. **外部 → ALB**
 - 検証手順<br>
 Cloudflareでドメインを取得してRoute 53のホストゾーンに委任。TLS証明書をALBに関連づけることで、HTTPS通信を使用可能とした。(ALBのSG = 443,0.0.0.0/0)<br>
 Nginxを追加したEC2の実行環境でcurlコマンドを行い、外部クライアントからEC2のWebサーバーまでを疎通する経路で確認。
@@ -58,13 +58,13 @@ Nginxを追加したEC2の実行環境でcurlコマンドを行い、外部ク�
 - 成功条件<br>
 HTTPステータスコードが「200 OK」
 
-2. 外部 → SSM → EC2
+2. **外部 → SSM → EC2**
 - 検証手順<br>
 Session Manager 経由でEC2の対象インスタンスに接続。Nginxをインストールして起動出来るかどうかを確認。
 
 - 成功条件<br>
 
-3. ALB → EC2
+3. **ALB → EC2**
 - 検証手順<br>
 Nginxを追加したEC2の実行環境でcurlコマンドを行い、外部クライアントからEC2のWebサーバーまでの疎通を検証。
 AZごとに配置したEC2(Nginx)の応答で確認。
@@ -72,13 +72,13 @@ AZごとに配置したEC2(Nginx)の応答で確認。
 - 成功条件<br>
 HTTPステータスコードが「200 OK」
 
-4. EC2 → RDS
+4. **EC2 → RDS**
 - 検証手順<br>
 MySQLプロトコルで通信するため、curlではなくncコマンドを使用。RDSのエンドポイントを指定、応答の有無で確認。
 
 - 成功条件<br>
 
-5. EC2 → NAT Gateway → Internet
+5. **EC2 → NAT Gateway → Internet**
 - 検証手順<br>
 Nginxを追加したEC2の実行環境でcurlコマンドを行い、Webサーバーから外部クライアントへアクセス出来るかどうかを確認。
 
@@ -88,12 +88,12 @@ HTTPステータスコードが「200 OK」
 ### 疎通検証結果
 以下、通信経路別に疎通検証の結果を記載。
 
-1. 外部 → ALB
+1. **外部 → ALB**
 
-2. 外部 → SSM → EC2
+2. **外部 → SSM → EC2**
 
-3. ALB → EC2
+3. **ALB → EC2**
 
-4. EC2 → RDS
+4. **EC2 → RDS**
 
-5. EC2 → NAT Gateway → Internet
+5. **EC2 → NAT Gateway → Internet**

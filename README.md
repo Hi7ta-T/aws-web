@@ -8,18 +8,18 @@ Terraformを用いてIaC化を実施した。<br>
 アプリケーションに用いるAPIやDBの構築、フロントエンドの作成を行い、年内を目標に一つのアプリケーションとして機能させることを最終目標として置いている。
 
 ## 現在の構築状況
-- TerraformでVPC内リソースをIaC化<br>
+- **TerraformでVPC内リソースをIaC化** <br>
 完了：作成したコードのセルフレビュー<br>
 実施中：リソース毎の疎通検証<br>
 
-- IAM RoleでのSSM接続対応<br>
+- **IAM RoleでのSSM接続対応** <br>
  (IaC化完了、疎通検証実施中)
 
-- CloudWatch Alarmのメトリクス閾値<br>
+- **CloudWatch Alarmのメトリクス閾値** <br>
 疎通検証時に取得する標準メトリクスの値から、Alarm発火の初期値を設定予定
 
-- API構築、フロントエンドは未着手<br>
-インフラ基盤の疎通検証後FastAPI(Python)でAPI構築を予定
+- **API構築、フロントエンドは未着手** <br>
+FastAPI(Python)でのAPI構築に向けて、HTTPメソッドと宛先となるURLを整理中
 
 ## アーキテクチャ方針
 ![アーキテクチャ図](docs/architecture.png)

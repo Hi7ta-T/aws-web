@@ -73,7 +73,7 @@ terraform fmt / validateとTFLintでセルフレビューを実施。疎通検�
 インフラ基盤となる3層構成(ALB/EC2/RDS)に関わる主要リソースのIaC化が完了。<br>
 今後はCloudWatch Alarms、SNS、Route 53といったVPC外リソースのIaC化を予定。
 
-IaC化済<br>
+**IaC化済**<br>
 | リソース名 | ファイル| 
 |:-----:|:-----:|
 | Provider | [provider.tf](terraform/provider.tf)| 
@@ -89,7 +89,7 @@ IaC化済<br>
 | RDS | [rds.tf](terraform/rds.tf)|
 
 
-IaC化中<br>
+**IaC化中**<br>
 | リソース名 | ファイル| 
 |:-----:|:-----:|
 | Route 53 | [route53.tf](terraform/route53.tf)| 

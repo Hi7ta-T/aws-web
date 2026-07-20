@@ -64,7 +64,7 @@ HTTPステータスコードが「200 OK」
 2. **外部 → SSM → EC2**<br>
 ` aws ssm start-session --target `
 - 検証手順<br>
-Session Manager 経由でEC2の対象インスタンスに接続。Nginxをインストールして起動出来るかどうかを確認。
+Session Manager 経由でEC2の対象インスタンスに接続出来ることを確認。インスタンスはの接続後、Nginxをインストールして起動出来るかどうかを検証。
 
 - 成功条件<br>
 EC2へのログイン、ならびにNginxのインストールと起動が出来るかどうか。
@@ -91,7 +91,7 @@ ncコマンドのレスポンスが「Succeeded!」
 5. **EC2 → NAT Gateway → Internet**<br>
 ` curl --connect-timeout 3 https://DNS名 `
 - 検証手順<br>
-Nginxを追加したEC2の実行環境でcurlコマンドを行い、Webサーバーから外部クライアントへアクセス出来るかどうかを確認。
+Nginxを追加したEC2の実行環境でcurlコマンドを行い、EC2からインターネットへアウトバウンド通信出来るかどうかを確認。
 
 - 成功条件<br>
 HTTPステータスコードが「200 OK」

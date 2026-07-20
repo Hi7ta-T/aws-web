@@ -33,7 +33,8 @@ terraform validate の実行時に頻繁に検出されたエラー例を記載�
 
 ## 各リソースの疎通検証
 ### 検証手順、成功条件
-可用性を意識して2AZ構成でEC2とNAT Gatewayを分割配置して構築しているため、AZ毎に各リソースの通信経路に適した方法で疎通検証を行った。(外部 → ALB を除く)
+可用性を意識して2AZ構成でEC2とNAT Gatewayを分割配置して構築しているため、AZ毎に各リソースの通信経路に適した方法で疎通検証を行った。(外部 → ALB を除く)<br>
+なお、長時間の応答待機を防ぐため、タイムアウト値を3秒に設定した。
 
 | 通信経路 | AZ |
 |:-----:|:-----:|
@@ -50,7 +51,8 @@ terraform validate の実行時に頻繁に検出されたエラー例を記載�
 Terraform専用のIAMユーザーを作成し、疎通検証を優先するために一時的にAdministrator Accessを付与。<br>
 IAMは最小権限が推奨されていることから、疎通検証完了後は必要な権限のみを設定予定。
 
-1. **外部 → ALB**
+1. **外部 → ALB**<br>
+` curl --connect-timeout 3 https://DNS名 `
 - 検証手順<br>
 Cloudflareでドメインを取得してRoute 53のホストゾーンに委任。TLS証明書をALBに関連づけることで、HTTPS通信を使用可能とした。(ALBのSG = 443,0.0.0.0/0)<br>
 Nginxを追加したEC2の実行環境でcurlコマンドを行い、外部クライアントからEC2のWebサーバーまでを疎通する経路で確認。
@@ -64,7 +66,8 @@ Session Manager 経由でEC2の対象インスタンスに接続。Nginxをイ�
 
 - 成功条件<br>
 
-3. **ALB → EC2**
+3. **ALB → EC2**<br>
+` curl --connect-timeout 3 https://DNS名 `
 - 検証手順<br>
 Nginxを追加したEC2の実行環境でcurlコマンドを行い、外部クライアントからEC2のWebサーバーまでの疎通を検証。
 AZごとに配置したEC2(Nginx)の応答で確認。
@@ -72,13 +75,19 @@ AZごとに配置したEC2(Nginx)の応答で確認。
 - 成功条件<br>
 HTTPステータスコードが「200 OK」
 
-4. **EC2 → RDS**
+4. **EC2 → RDS**<br>
+` nc -zv -w 3 RDSのエンドポイント 3306 `
 - 検証手順<br>
-MySQLプロトコルで通信するため、curlではなくncコマンドを使用。RDSのエンドポイントを指定、応答の有無で確認。
+MySQLプロトコルで通信するため、curlではなくncコマンドを使用。RDSのエンドポイントを指定、応答の有無で確認、
+<br>
+MySQLのログイン等は行わず、疎通検証のみを実施してその結果を確認するため、オプションとして-zvを使用。
 
 - 成功条件<br>
+ncコマンドのレスポンスが「Succeeded!」
 
-5. **EC2 → NAT Gateway → Internet**
+
+5. **EC2 → NAT Gateway → Internet**<br>
+` curl --connect-timeout 3 https://DNS名 `
 - 検証手順<br>
 Nginxを追加したEC2の実行環境でcurlコマンドを行い、Webサーバーから外部クライアントへアクセス出来るかどうかを確認。
 

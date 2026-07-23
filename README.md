@@ -18,7 +18,7 @@ Terraformを用いてIaC化を実施した。<br>
 - **CloudWatch Alarmのメトリクス閾値** <br>
 疎通検証時に取得する標準メトリクスの値から、Alarm発火の初期値を設定予定
 
-- **API構築、フロントエンドは未着手** <br>
+- **API構築、フロントエンド** <br>
 FastAPI(Python)でのAPI構築に向けて、HTTPメソッドと宛先となるURLを整理中
 
 ## アーキテクチャ方針

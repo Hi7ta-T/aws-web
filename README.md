@@ -32,7 +32,7 @@
 
 - **CloudWatch Alarmのメトリクス閾値** <br>
 完了：Alarm発火に至るメトリクスの選定<br>
-実施中：Alarm発火の初期値設定<br>
+実施中：Alarm発火の閾値設定<br>
 
 - **API構築、DB設計** <br>
 完了：エンティティの選定、ER図の作成<br>

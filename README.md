@@ -100,7 +100,6 @@ terraform fmt / validateとTFLintでセルフレビューを実施。疎通検�
 [セルフレビュー、検証結果](docs/verification.md)
 
 ## 障害時の運用設計
-疎通確認時のメトリクスを参考にAlarm発火の閾値を設定。<br>
 CloudWatch AlarmsとSNSを連携させて障害発生時に通知することで、障害の早期発見と迅速な復旧対応へと連携。<br>
 <br>
 運用設計書はこちら<br>

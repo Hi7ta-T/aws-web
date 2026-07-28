@@ -7,6 +7,7 @@
 - [アーキテクチャ方針](#アーキテクチャ方針)
 - [使用技術一覧](#使用技術一覧)
 - [NW構成](#NW構成)
+- [DB設計(作成中)](#DB設計)
 - [terraform、疎通検証](#terraform)
 - [運用設計](#運用設計)
 - [開発記録](#開発記録)
@@ -79,6 +80,10 @@ FastAPI(Python)でのAPI構築に向けて、HTTPメソッドと宛先となるU
 
 詳細なNW構成はこちら<br>
 [NW構成](docs/design-network.md)
+
+## DB設計
+![ER図](docs/er_diagram.png)
+ユーザー(user)、場所(spot)、口コミ(review)の3つのエンティティを使用。
 
 ## terraform
 ### 現在のIaC化状況

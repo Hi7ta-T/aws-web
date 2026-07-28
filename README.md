@@ -7,7 +7,7 @@
 - [アーキテクチャ方針](#アーキテクチャ方針)
 - [使用技術一覧](#使用技術一覧)
 - [NW構成](#NW構成)
-- [Terraform(IaC)、疎通検証](#Terraform(IaC))
+- [Terraform、疎通検証](#terraform)
 - [運用設計](#運用設計)
 - [開発記録](#開発記録)
 - [今後の展望](#今後の展望)
@@ -80,10 +80,9 @@ FastAPI(Python)でのAPI構築に向けて、HTTPメソッドと宛先となるU
 詳細なNW構成はこちら<br>
 [NW構成](docs/design-network.md)
 
-## Terraform(IaC)
-terraform fmt / validateとTFLintでセルフレビューを実施。疎通検証後にtfsecでのセキュリティチェックを予定している。<br>
+## terraform
 ### 現在のIaC化状況
-インフラ基盤となる3層構成(ALB/EC2/RDS)に関わる主要リソースのIaC化が完了。
+Terraformを用いてインフラ基盤となる3層構成(ALB/EC2/RDS)に関わる主要リソースのIaC化が完了。
 
 **IaC化済**<br>
 | リソース名 | ファイル| 
@@ -108,7 +107,8 @@ terraform fmt / validateとTFLintでセルフレビューを実施。疎通検�
 | CloudWatch<br>(Alarms) | [cloudwatch.tf](terraform/cloudwatch.tf)|
 | ACM | [acm.tf](terraform/acm.tf)| 
 
-<br>
+### セルフレビューと疎通検証
+terraform fmt / validateとTFLintでセルフレビューを実施。疎通検証後にtfsecでのセキュリティチェックを予定している。<br>
 セルフレビュー方法、リソースの検証方法と疎通結果はこちら(現在作成中)<br>
 
 [セルフレビュー、検証結果](docs/verification.md)

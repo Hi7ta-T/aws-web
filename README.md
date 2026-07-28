@@ -34,10 +34,11 @@
  (IaC化完了、疎通検証実施中)
 
 - **CloudWatch Alarmのメトリクス閾値** <br>
-疎通検証時に取得する標準メトリクスの値から、Alarm発火の初期値を設定予定
+疎通検証時に取得する標準メトリクスの値から、Alarm発火の初期値を設定する予定
 
-- **API構築、フロントエンド** <br>
-FastAPI(Python)でのAPI構築に向けて、HTTPメソッドと宛先となるURLを整理中
+- **API構築、DB設計** <br>
+FastAPI(Python)でのAPI構築、アプリケーションのDB設計(MySQL)を開始<br>
+DDLでのテーブル作成に向けて、データ型などを整理中
 
 ## アーキテクチャ方針
 ![アーキテクチャ図](docs/architecture.png)

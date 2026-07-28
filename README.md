@@ -8,7 +8,7 @@
 - [使用技術一覧](#使用技術一覧)
 - [NW構成](#NW構成)
 - [DB設計(作成中)](#DB設計)
-- [terraform、疎通検証](#terraform)
+- [Terraform、疎通検証](#Terraform)
 - [運用設計](#運用設計)
 - [開発記録](#開発記録)
 - [今後の展望](#今後の展望)
@@ -85,7 +85,7 @@ FastAPI(Python)でのAPI構築に向けて、HTTPメソッドと宛先となるU
 ![ER図](docs/er_diagram.png)
 ユーザー(user)、場所(spot)、口コミ(review)の3つのエンティティを使用。
 
-## terraform
+## Terraform
 ### 現在のIaC化状況
 インフラ基盤となる3層構成(ALB/EC2/RDS)に関わる主要リソースのIaC化が完了。
 

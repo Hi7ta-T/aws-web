@@ -109,6 +109,7 @@ FastAPI(Python)でのAPI構築に向けて、HTTPメソッドと宛先となるU
 
 ### セルフレビューと疎通検証
 terraform fmt / validateとTFLintでセルフレビューを実施。疎通検証後にtfsecでのセキュリティチェックを予定している。<br>
+<br>
 セルフレビュー方法、リソースの検証方法と疎通結果はこちら(現在作成中)<br>
 
 [セルフレビュー、検証結果](docs/verification.md)

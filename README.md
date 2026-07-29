@@ -73,6 +73,11 @@
 - Debian GNU/Linux 12 (bookworm)
 - Visual Studio Code 1.118.1
 
+### 使用予定
+- HTML (フロントエンド構造)
+- JavaScript (フロントエンド動作)
+- CSS (スタイル)
+
 ## NW構成
 2AZの3層構成(ALB,EC2,RDS)を単一リージョンで作成。
 - 1AZにつきPublic Subnetを1個とPrivate Subnetを2個配置

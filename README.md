@@ -64,6 +64,7 @@
 - AWS（クラウド）
 - Terraform（IaC化)
 - Nginx (Webサーバー/リバースプロキシ）
+- MySQL (データベース)
 - FastAPI（API構築)
 - Figma（構成図デザイン）
 - GitHub（ソースコード管理）

@@ -94,7 +94,7 @@ CRUDの実装に向けて、現在はMySQLのテーブル構築中。
 ## DB設計
 ![ER図](docs/er-diagram.png)
 ユーザー(user)、場所(spot)、口コミ(review)の3つのエンティティを使用。<br>
-MySQL(DDL)を用いてDBテーブルを作成後、サンプルデータを格納。その後、構築したAPIで検証予定。
+MySQLを用いてDBテーブルを作成後、サンプルデータを格納。その後、構築したAPIで検証予定。
 
 ## Terraform
 ### 現在のIaC化状況

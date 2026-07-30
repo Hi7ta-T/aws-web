@@ -87,7 +87,7 @@
 [NW構成](docs/design-network.md)
 
 ## DB設計
-![ER図](docs/er_diagram.png)
+![ER図](docs/er-diagram.png)
 ユーザー(user)、場所(spot)、口コミ(review)の3つのエンティティを使用。
 
 ## Terraform

@@ -88,7 +88,8 @@
 [NW構成](docs/design-network.md)
 
 ## API実装
-学習難易度、FastAPI(Python)を使用。
+学習難易度を鑑みてFastAPI(Python)を選定。<br>
+CRUDの実装に向けて、現在はMySQLのテーブル構築中。
 
 ## DB設計
 ![ER図](docs/er-diagram.png)

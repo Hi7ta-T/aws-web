@@ -89,12 +89,12 @@
 
 ## API実装
 学習難易度を鑑みてFastAPI(Python)を選定。<br>
-CRUDの実装に向けて、現在はMySQLのテーブル構築中。
+REST APIでのCRUD実装に向けて、現在はMySQLのテーブル構築中。
 
 ## DB設計
 ![ER図](docs/er-diagram.png)
 ユーザー(user)、場所(spot)、口コミ(review)の3つのエンティティを使用。<br>
-MySQLを用いてDBテーブルを作成。サンプルデータを格納し、構築したAPIで検証予定。
+MySQLのDDLを用いてDBテーブルを作成。<br>各エンティティのテーブル作成後にサンプルデータを格納し、構築したAPIで検証予定。
 
 ## Terraform
 ### 現在のIaC化状況

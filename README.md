@@ -155,7 +155,7 @@ CloudWatch AlarmsとSNSを連携させて障害発生時に通知することで
 (Route 53,SNS,CloudWatch、ACM)
 2. SSMの通信経路変更<br>
 (NAT Gateway → VPC Endpoint)
-3. FastAPI(Python)でのAPI構築、DB設計
+3. FastAPI(Python)でのCRUD構築
 4. アプリケーションのマルチリージョン化
 5. Route 53の自動フェイルオーバー有効化
 

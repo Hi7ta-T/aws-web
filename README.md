@@ -171,3 +171,6 @@ CloudWatch AlarmsとSNSを連携させて障害発生時に通知することで
 
 - [運用設計書](docs/trouble-shooting.md)<br>
 インスタンス障害、AZ障害、リージョン障害時の現段階の障害検知と可用性を確保するための対策を記載。補足としてアプリケーション障害時の対応も述べている。
+
+- [API実装、DB設計](docs/api-db.md)<br>
+FastAPIを用いたREST APIのCRUD実装、ならびにMySQLでのテーブル設計について記載。

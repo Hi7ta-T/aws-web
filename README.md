@@ -89,7 +89,7 @@
 
 ## API実装
 学習難易度を鑑みてFastAPI(Python)を選定。<br>
-REST APIでのCRUD実装に向けて、現在はMySQLのテーブル構築中。
+REST APIでのCRUD実装に向けて、現在はMySQLのテーブル構築を行っている。
 
 ## DB設計
 ![ER図](docs/er-diagram.png)

@@ -151,11 +151,11 @@ CloudWatch AlarmsとSNSを連携させて障害発生時に通知することで
 
 ## 今後の展望
 アプリケーションに用いるAPIやDBの構築、フロントエンドの作成を行い、年内を目標に一つのアプリケーションとして機能させることを最終目標として置いている。<br>
-1. TerraformでVPC外リソースのIaC化<br>
-(Route 53,SNS,CloudWatch、ACM)
-2. SSMの通信経路変更<br>
+1. FastAPI(Python)でのCRUD構築
+2.  SSMの通信経路変更<br>
 (NAT Gateway → VPC Endpoint)
-3. FastAPI(Python)でのCRUD構築
+3. TerraformでVPC外リソースのIaC化<br>
+(Route 53,SNS,CloudWatch、ACM)
 4. アプリケーションのマルチリージョン化
 5. Route 53の自動フェイルオーバー有効化
 

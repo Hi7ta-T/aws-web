@@ -94,7 +94,10 @@ REST APIでのCRUD実装に向けて、現在はMySQLのテーブル構築を行
 ## DB設計
 ![ER図](docs/er-diagram.png)
 ユーザー(user)、場所(spot)、口コミ(review)の3つのエンティティを使用。<br>
-MySQLのDDLを用いてDBテーブルを作成。<br>各エンティティのテーブル作成後にサンプルデータを格納し、構築したAPIで検証予定。
+MySQLのDDLを用いてDBテーブルを作成。<br>各エンティティのテーブル作成後にサンプルデータを格納し、構築したAPIで検証予定。<br>
+<br>
+API実装、DB設計のSQLはこちら<br>
+[API実装・DB設計](docs/api-db.md)
 
 ## Terraform
 ### 現在のIaC化状況
@@ -128,7 +131,7 @@ terraform fmt / validateとTFLintでセルフレビューを実施。疎通検�
 <br>
 セルフレビュー方法、リソースの検証方法と疎通結果はこちら(現在作成中)<br>
 
-[セルフレビュー、検証結果](docs/verification.md)
+[セルフレビュー・検証結果](docs/verification.md)
 
 ## 運用設計
 CloudWatch AlarmsとSNSを連携させて障害発生時に通知することで、障害の早期発見と迅速な復旧対応へと連携。<br>
@@ -166,11 +169,11 @@ CloudWatch AlarmsとSNSを連携させて障害発生時に通知することで
 - [NW構成](docs/design-network.md)<br>
 セキュリティを鑑みたサブネット配置やCIDR、SGについて記載。
 
-- [セルフレビュー、検証結果](docs/verification.md)<br>
+- [セルフレビュー・検証結果](docs/verification.md)<br>
 前半はterraform fmt / validate やTFLintを用いたセルフレビューと頻出したエラーを記載。後半は作成したコードで行った経路別の疎通検証結果を記録している。
 
 - [運用設計書](docs/trouble-shooting.md)<br>
 インスタンス障害、AZ障害、リージョン障害時の現段階の障害検知と可用性を確保するための対策を記載。補足としてアプリケーション障害時の対応も述べている。
 
-- [API実装、DB設計](docs/api-db.md)<br>
+- [API実装・DB設計](docs/api-db.md)<br>
 FastAPIを用いたREST APIのCRUD実装、ならびにMySQLでのテーブル設計について記載。

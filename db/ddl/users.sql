@@ -11,4 +11,6 @@ CREATE TABLE user (
   gender ENUM(
    '男性', '女性','未回答') NOT NULL
 
+  FOREIGN KEY (current_pref)
+  REFERENCES prefecture(pref_id)
 );

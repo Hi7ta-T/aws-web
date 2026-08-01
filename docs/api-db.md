@@ -6,9 +6,9 @@
 その後、DDLを用いてテーブルを構築。構築したテーブルにDMLでサンプルデータを入力し、FastAPIなどの必要に応じてDQLで格納データを取得する想定とした。
 
 ### DDLを用いたテーブル構築
-CREATE TABLE を用いてユーザー(users)、場所(spots)、都道府県(prefecture)、口コミ(reviews)の4つのテーブルを構築。<br>
+CREATE TABLEを用いてユーザー(users)、場所(spots)、都道府県(prefecture)、口コミ(reviews)の4つのテーブルを構築。<br>
 <br>
-なお、RDS on MySQLを使用するため、CREATE DATABASE でのDBの構築は実施していない。<br>
+なお、TerraformでのRDSリソース作成時にDBを作成するため、DDLではCREATE DATABASEを実施していない。<br>
 <br>
 以下、各テーブルのDDLを記載。
 | テーブル名 | ファイル| 

@@ -7,6 +7,13 @@
 
 ### DDLを用いたテーブル構築
 CREATE TABLE を用いてユーザー(users)、場所(spots)、都道府県(prefecture)、口コミ(reviews)の4つのテーブルを構築。<br>
+<br>
 なお、RDS on MySQLを使用するため、CREATE DATABASE でのDBの構築は実施していない。<br>
 <br>
-以下、各テーブル構築のSQLを記載。
+以下、各テーブルのDDLを記載。
+| テーブル名 | ファイル| 
+|:-----:|:-----:|
+| ユーザー(users) | [users.sql](db/ddl/users.sql)| 
+| 場所(spots) | [spots.sql](db/ddl/spots.sql)| 
+| 都道府県(prefecture) | [prefecture.sql](db/ddl/prefecture.sql)| 
+| 口コミ(reviews) | [reviews.sql](db/ddl/reviews.sql)| 

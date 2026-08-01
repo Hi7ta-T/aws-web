@@ -37,7 +37,7 @@
 
 - **API実装、DB設計** <br>
 完了：エンティティの選定、ER図の作成<br>
-実施中：DDLでのテーブル作成に向けたデータ型の整理、REST API のCRUD構築<br>
+実施中：DMLでのサンプルデータ入力、REST API のCRUD構築<br>
 
 ## アーキテクチャ方針
 ![アーキテクチャ図](docs/architecture.png)

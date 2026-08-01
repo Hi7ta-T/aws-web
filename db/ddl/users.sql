@@ -1,5 +1,5 @@
 
-CREATE TABLE user (
+CREATE TABLE users (
   user_id INT PRIMARY KEY NOT NULL,
   nickname VARCHAR(20) NOT NULL,
   password VARCHAR(60) NOT NULL,

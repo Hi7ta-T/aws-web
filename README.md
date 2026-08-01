@@ -96,7 +96,7 @@ REST APIでのCRUD実装に向けて、現在はMySQLのテーブル構築を行
 ユーザー(user)、場所(spot)、口コミ(review)の3つのエンティティを使用。<br>
 MySQLのDDLを用いてDBテーブルを作成。<br>各エンティティのテーブル作成後にサンプルデータを格納し、構築したAPIで検証予定。<br>
 <br>
-API実装、DB設計のSQLはこちら<br>
+APIの実装コード、DB設計のSQLはこちら<br>
 [API実装・DB設計](docs/api-db.md)
 
 ## Terraform

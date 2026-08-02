@@ -19,5 +19,6 @@ CREATE TABLEを用いてユーザー(users)、場所(spots)、都道府県(prefe
 | 口コミ(reviews) | [reviews.sql](../db/ddl/reviews.sql)| 
 
 ### DMLを用いたサンプルデータ入力
+prefectureテーブルのpref_nameは都道府県名のため、マスタデータとして実際の名称を登録。<br>他のカラムはトランザクションデータとしてサンプルデータを入力した。
 
 ### DQLを用いた格納データの取得

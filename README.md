@@ -63,10 +63,10 @@
 <br>
 ### 技術スタック
 - AWS（クラウド）<br>
-VPC, ALB, EC2, RDS, NAT Gateway , Route53, SSM, CloudWatch, SNS, ACM 等を使用。
-- Terraform（IaC化)
+VPC, ALB, EC2, RDS, NAT Gateway , Route53, SSM, CloudWatch, SNS, ACM を使用。<br>
 - Python (プログラミング言語)<br>
-追加ライブラリは別途記載。
+追加ライブラリは別途記載。<br>
+- Terraform（IaC化)
 - Nginx (Webサーバー/リバースプロキシ）
 - MySQL (データベース)
 - Figma（構成図デザイン）

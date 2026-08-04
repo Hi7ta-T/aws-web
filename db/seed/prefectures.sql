@@ -1,4 +1,4 @@
-INSERT INTO prefecture (pref_id, pref_name)
+INSERT INTO prefectures (pref_id, pref_name)
 VALUES (1, '北海道'),
        (2, '青森県'),
 　　　　 (3, '岩手県'),

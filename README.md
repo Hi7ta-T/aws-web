@@ -71,11 +71,11 @@
 - GitHub（ソースコード管理）
 
 ### 追加ライブラリ
-- FastAPI (API構築)
+- FastAPI (APIフレームワーク)
 - Uvicorn (FastAPI実装)
 - SQLAlchemy (DB操作)
 - PyMySQL (MySQL接続)
-- passlib[bcrypt] (ハッシュ化)
+- passlib[bcrypt] (認証情報のハッシュ化)
 - boto3 (AWS SDK)
 - python-dotenv (接続情報保護)
 

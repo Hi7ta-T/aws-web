@@ -65,8 +65,9 @@
 - AWS（クラウド）<br>
 VPC, IGW, ALB, EC2, RDS, NAT Gateway, Route53, SSM, CloudWatch, SNS, ACM を使用。
 - Python (プログラミング言語)<br>
-追加ライブラリは別途記載。<br>
+追加ライブラリは別途記載。
 - Terraform（IaC化)
+- Cloudflare (証明書ドメイン取得)
 - Nginx (Webサーバー/リバースプロキシ）
 - MySQL (データベース)
 - Figma（構成図デザイン）

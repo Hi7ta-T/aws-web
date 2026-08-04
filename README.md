@@ -64,11 +64,20 @@
 ### 技術スタック
 - AWS（クラウド）
 - Terraform（IaC化)
+- Python (プログラミング言語)
 - Nginx (Webサーバー/リバースプロキシ）
 - MySQL (データベース)
-- FastAPI（API構築)
 - Figma（構成図デザイン）
 - GitHub（ソースコード管理）
+
+### 追加ライブラリ
+- FastAPI (API構築)
+- Uvicorn (FastAPI実装)
+- SQLAlchemy (DB操作)
+- PyMySQL (MySQL接続)
+- passlib[bcrypt] (ハッシュ化)
+- boto3 (AWS SDK)
+- python-dotenv (接続情報保護)
 
 ### 開発環境
 - Debian GNU/Linux 12 (bookworm)

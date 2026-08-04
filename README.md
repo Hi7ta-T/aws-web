@@ -62,9 +62,11 @@
 [各サービスの比較、選定理由](docs/service-selection.md)
 <br>
 ### 技術スタック
-- AWS（クラウド）
+- AWS（クラウド）<br>
+VPC, ALB, EC2, RDS, NAT Gateway , Route53, SSM, CloudWatch, SNS, ACM 等を使用。
 - Terraform（IaC化)
-- Python (プログラミング言語)
+- Python (プログラミング言語)<br>
+追加ライブラリは別途記載。
 - Nginx (Webサーバー/リバースプロキシ）
 - MySQL (データベース)
 - Figma（構成図デザイン）

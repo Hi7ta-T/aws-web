@@ -70,7 +70,7 @@
 - Figma（構成図デザイン）
 - GitHub（ソースコード管理）
 
-### 追加ライブラリ
+### Pythonライブラリ
 - FastAPI (APIフレームワーク)
 - Uvicorn (FastAPI実装)
 - SQLAlchemy (DB操作)

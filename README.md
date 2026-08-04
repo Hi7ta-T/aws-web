@@ -91,7 +91,7 @@ VPC, ALB, EC2, RDS, NAT Gateway , Route53, SSM, CloudWatch, SNS, ACM 等を使�
 - CSS (スタイル)
 
 ## NW構成
-2AZの3層構成(ALB,EC2,RDS)を単一リージョンで作成。
+2AZの3層構成(ALB, EC2, RDS)を単一リージョンで作成。
 - 1AZにつきPublic Subnetを1個とPrivate Subnetを2個配置
 - EC2の実行環境はSSMを経由して使用するため22ポート(SSH)の開放不要
 

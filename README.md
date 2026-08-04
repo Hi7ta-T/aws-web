@@ -68,7 +68,7 @@ VPC, IGW, ALB, EC2, RDS, NAT Gateway, Route 53, SSM, CloudWatch, SNS, ACM を使
 追加ライブラリは別途記載。
 - Terraform（IaC化)
 - Cloudflare (ドメイン取得)<br>
-取得したドメインはRoute 53にNSサーバー移行。
+取得後はRoute 53にNSサーバー移行。
 - Nginx (Webサーバー/リバースプロキシ）
 - MySQL (データベース)
 - Figma（構成図デザイン）

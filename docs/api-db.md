@@ -1,14 +1,14 @@
 ## API実装
 API実装に関する追加ライブラリとしてFastAPIとUvicornを使用。<br>
-疎通検証のため、最初に口コミの一覧表示(POST, /reviews)のAPI実装を行い、その後は必要に応じたAPIを作成する予定としている。
+疎通検証のため、最初に口コミの一覧表示(GET, /reviews)のAPI実装を行い、その後は必要に応じたAPIを作成する予定としている。
 
 ## DB設計
 エンティティとカラムの確定後、多重度に応じてテーブル同士の関係性を決定。データ型とNULL可否を確定させてからER図を作成。<br>
 <br>
-その後、DDLを用いてテーブルを構築。構築したテーブルにDMLでサンプルデータを入力し、FastAPIなどの必要に応じてDQLで格納データを取得する。
+その後、DDLを用いてテーブルを構築。構築したテーブルにDMLでサンプルデータを入力し、FastAPIからDQL(SELECT文)を実行し、格納されたデータを取得する。
 
 ### DDLを用いたテーブル構築
-CREATE TABLEを用いてユーザー(users)、場所(spots)、都道府県(prefecture)、口コミ(reviews)の4つのテーブルを構築。<br>
+CREATE TABLEを用いてユーザー(users)、場所(spots)、都道府県(prefectures)、口コミ(reviews)の4つのテーブルを構築。<br>
 <br>
 なお、TerraformでのRDSリソース作成時にDBを作成するため、DDLではCREATE DATABASEを実施していない。<br>
 <br>
@@ -17,7 +17,7 @@ CREATE TABLEを用いてユーザー(users)、場所(spots)、都道府県(prefe
 |:-----:|:-----:|
 | ユーザー(users) | [users.sql](../db/ddl/users.sql)| 
 | 場所(spots) | [spots.sql](../db/ddl/spots.sql)| 
-| 都道府県(prefecture) | [prefecture.sql](../db/ddl/prefecture.sql)| 
+| 都道府県(prefectures) | [prefectures.sql](../db/ddl/prefectures.sql)| 
 | 口コミ(reviews) | [reviews.sql](../db/ddl/reviews.sql)| 
 
 ### DMLを用いたサンプルデータ入力

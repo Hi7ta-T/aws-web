@@ -110,7 +110,7 @@ VPC, ALB, EC2, RDS, NAT Gateway, Route 53, SSM, CloudWatch(Metrics, Alarms) SNS,
 | ライブラリAPI | FastAPI, Uvicorn, SQLAlchemy, passlibなど<br>必要な機能に応じたライブラリを使用 |
 | クラウドAPI | AWS API<br>(Terraform経由) |
 
-### Web APIの実装
+### Web APIの構築
 REST APIでのCRUD実装に向けて、現在はMySQLのテーブル構築を実施している。
 
 ## DB設計

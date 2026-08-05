@@ -41,8 +41,7 @@
 
 ## アーキテクチャ方針
 ![アーキテクチャ図](docs/architecture.png)
-
-本成果物の作成軸は「設計理解」と「コスト」である。<br>
+**本成果物の作成軸は「設計理解」と「コスト」である。**<br>
 アプリケーションの可用性と設計コストはトレードオフの関係にあるため、作成軸を元に可用性の確保基準を考慮した。
 
 ### リージョン
@@ -67,7 +66,6 @@ VPC, ALB, EC2, RDS, NAT Gateway, Route 53, SSM, CloudWatch(Metrics, Alarms) SNS,
 - Python (プログラミング言語)<br>
 追加ライブラリは別途記載。
 - Terraform（IaC)
-- AWS API (AWSリソース操作)
 - Cloudflare (ドメイン取得)<br>
 取得後はRoute 53にNSサーバー移行。
 - Nginx (Webサーバー/リバースプロキシ）
@@ -102,7 +100,7 @@ VPC, ALB, EC2, RDS, NAT Gateway, Route 53, SSM, CloudWatch(Metrics, Alarms) SNS,
 
 ## API実装
 ### 使用するAPI構成
-以下、今回のアプリケーション構築で使用するAPI構成を記載。<br>
+以下、本成果物で使用するAPI構成を記載。<br>
 | API名 | 今回使用するAPI | 
 |:-----:|:-----:|
 | Web API | FastAPI(Python) |
@@ -118,7 +116,7 @@ REST APIでのCRUD実装に向けて、現在はMySQLのテーブル構築を実
 ユーザー(user)、場所(spot)、口コミ(review)の3つのエンティティを使用。<br>
 MySQLのDDLを用いてDBテーブルを作成。<br>各エンティティのテーブル作成後にサンプルデータを格納し、構築したAPIで検証予定。<br>
 <br>
-APIの実装コード、DB設計のSQLはこちら<br>
+API実装コード、DB設計(SQL)はこちら<br>
 [API実装・DB設計](docs/api-db.md)
 
 ## Terraform

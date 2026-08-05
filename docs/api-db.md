@@ -1,6 +1,6 @@
 ## API実装
 API実装に関する追加ライブラリとしてFastAPIとUvicornを使用。<br>
-疎通検証を実施するため、最初に口コミの一覧表示(GET, /reviews)のAPI実装を行い、その後は必要に応じたAPIを作成する予定としている。
+疎通検証を実施するため、最初に口コミの一覧表示(GET, /reviews)のAPI実装を行い、その後は必要に応じたAPIを作成する予定とした。
 
 ## DB設計
 ![ER図](../docs/er-diagram.png)
@@ -38,4 +38,4 @@ prefecturesテーブルの「pref_name」は都道府県名を表しているた
 FastAPIでのリクエストに応じてSELECT文を実行し、取得したデータをJSON形式で表示。<br>
 <br>
 疎通検証の実施に伴って口コミの一覧表示(GET, /reviews)のAPIを実装するため、SELECT文でreviewsテーブルの全カラムを取得するDQLを記述。<br>
-以降はSELECT文に加えてORDER BY, LIMITなどを用いることで、実装したAPIに応じたデータを取得する予定としている。
+以降はSELECT文に加えてORDER BY, LIMITなどを用いることで、実装したAPIに応じた処理を行ってデータを取得する予定。

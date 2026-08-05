@@ -67,6 +67,7 @@ VPC, ALB, EC2, RDS, NAT Gateway, Route 53, SSM, CloudWatch(Metrics, Alarms) SNS,
 - Python (プログラミング言語)<br>
 追加ライブラリは別途記載。
 - Terraform（IaC)
+- AWS API (AWSリソース操作)
 - Cloudflare (ドメイン取得)<br>
 取得後はRoute 53にNSサーバー移行。
 - Nginx (Webサーバー/リバースプロキシ）
@@ -80,7 +81,6 @@ VPC, ALB, EC2, RDS, NAT Gateway, Route 53, SSM, CloudWatch(Metrics, Alarms) SNS,
 - SQLAlchemy (DB操作)
 - PyMySQL (MySQL接続)
 - passlib[bcrypt] (認証情報のハッシュ化)
-- boto3 (AWS SDK)
 - python-dotenv (接続情報保護)
 
 ### 開発環境
@@ -101,8 +101,17 @@ VPC, ALB, EC2, RDS, NAT Gateway, Route 53, SSM, CloudWatch(Metrics, Alarms) SNS,
 [NW構成](docs/design-network.md)
 
 ## API実装
-学習難易度を鑑みてFastAPI(Python)を選定。<br>
-REST APIでのCRUD実装に向けて、現在はMySQLのテーブル構築を行っている。
+### 使用するAPI構成
+以下、今回のアプリケーション構築で使用するAPI構成を記載。<br>
+| API名 | 今回使用するAPI | 
+|:-----:|:-----:|
+| Web API | FastAPI(Python) |
+| OS API | Python内部ライブラリ<br>OS機能を使用する際に呼出 |
+| ライブラリAPI | FastAPI, Uvicorn, SQLAlchemy, passlibなど<br>必要な機能に応じたライブラリを使用 |
+| クラウドAPI | AWS API<br>(Terraform経由) |
+
+### Web APIの実装
+REST APIでのCRUD実装に向けて、現在はMySQLのテーブル構築を実施している。
 
 ## DB設計
 ![ER図](docs/er-diagram.png)
@@ -117,7 +126,7 @@ APIの実装コード、DB設計のSQLはこちら<br>
 インフラ基盤となる3層構成(ALB/EC2/RDS)に関わる主要リソースのIaC化が完了。
 
 **IaC化済**<br>
-| リソース名 | ファイル| 
+| リソース名 | ファイル | 
 |:-----:|:-----:|
 | Provider | [provider.tf](terraform/provider.tf)| 
 | VPC | [vpc.tf](terraform/vpc.tf)| 

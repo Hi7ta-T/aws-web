@@ -35,7 +35,7 @@ prefecturesテーブルの「pref_name」は都道府県名を表しているた
 | 口コミ(reviews) | [reviews.sql](../db/seed/reviews.sql)| 
 
 ### DQLを用いた格納データの取得
-呼ばれたAPIに応じた処理を実施。<br>
-疎通検証の実施に伴って口コミの一覧表示(GET, /reviews)のAPIを実装するため、SELECT文でreviewsテーブルの全カラムを取得するDQLを記述した。<br>
+FastAPIでのリクエストに応じてSELECT文を実行し、取得したデータをJSON形式で表示。<br>
 <br>
-以降はSELECT文に加えてORDER BY, LIMITなどを用いることで、実装したAPIに応じたデータを取得する予定。
+疎通検証の実施に伴って口コミの一覧表示(GET, /reviews)のAPIを実装するため、SELECT文でreviewsテーブルの全カラムを取得するDQLを記述。<br>
+以降はSELECT文に加えてORDER BY, LIMITなどを用いることで、実装したAPIに応じたデータを取得する予定としている。

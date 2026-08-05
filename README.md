@@ -106,7 +106,7 @@ VPC, ALB, EC2, RDS, NAT Gateway, Route 53, SSM, CloudWatch(Metrics, Alarms) SNS,
 | Web API | FastAPI(Python) |
 | OS API | Python内部ライブラリ<br>OS機能を使用する際に呼出 |
 | ライブラリAPI | FastAPI, Uvicorn, SQLAlchemy, passlibなど<br>必要な機能に応じたライブラリを使用 |
-| クラウドAPI | AWS API<br>(Terraform経由) |
+| クラウドAPI | AWS API<br>(Terraform AWS Provider経由) |
 
 ### Web APIの構築
 REST APIでのCRUD実装に向けて、現在はMySQLのテーブル構築を実施している。

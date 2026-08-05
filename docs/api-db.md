@@ -1,6 +1,6 @@
 ## API実装
 API実装に関する追加ライブラリとしてFastAPIとUvicornを使用。<br>
-疎通検証を実施するため最初に口コミの一覧表示(GET, /reviews)のAPI実装を行い、その後は必要に応じたAPIを作成する予定としている。
+疎通検証を実施するため、最初に口コミの一覧表示(GET, /reviews)のAPI実装を行い、その後は必要に応じたAPIを作成する予定としている。
 
 ## DB設計
 ![ER図](../docs/er-diagram.png)

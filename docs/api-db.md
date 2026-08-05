@@ -37,5 +37,5 @@ prefecturesテーブルの「pref_name」は都道府県名を表しているた
 ### DQLを用いた格納データの取得
 FastAPIでのリクエストに応じてSELECT文を実行し、取得したデータをJSON形式で表示。<br>
 <br>
-疎通検証の実施に伴って口コミの一覧表示(GET, /reviews)のAPIを実装するため、SELECT文でreviewsテーブルの全カラムを取得するDQLを記述。<br>
+疎通検証の実施に伴って口コミの一覧表示(GET, /reviews)のAPIを実装するため、SELECT文でreviewsテーブルの全カラムを取得するDQLを記述。データが適切に登録されているか、格納されているデータが正常に取得出来るかどうかを確認することを目的とした。<br>
 以降はSELECT文に加えてORDER BY, LIMITなどを用いることで、実装したAPIに応じた処理を行ってデータを取得する予定。

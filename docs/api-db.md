@@ -14,7 +14,7 @@ CREATE TABLEを用いてユーザー(users)、場所(spots)、都道府県(prefe
 なお、TerraformでのRDSリソース作成時にDBを作成するため、DDLではCREATE DATABASEを実施していない。<br>
 <br>
 以下、各テーブルのDDLを記載。
-| テーブル名 | ファイル| 
+| テーブル名 | ファイル | 
 |:-----:|:-----:|
 | ユーザー(users) | [users.sql](../db/ddl/users.sql)| 
 | 場所(spots) | [spots.sql](../db/ddl/spots.sql)| 
@@ -27,7 +27,7 @@ prefecturesテーブルの「pref_name」は都道府県名を表しているた
 加えて、usersテーブルのpasswordに関しては認証情報の流出を防ぐため、Pythonの追加ライブラリであるpasslib[bcrypt]を用いてハッシュ化を実施。<br>
 <br>
 以下、各テーブルのDMLを記載。
-| テーブル名 | ファイル| 
+| テーブル名 | ファイル | 
 |:-----:|:-----:|
 | ユーザー(users) | [users.sql](../db/seed/users.sql)| 
 | 場所(spots) | [spots.sql](../db/seed/spots.sql)| 
@@ -39,4 +39,9 @@ FastAPIでのリクエストに応じてSELECT文を実行し、取得したデ�
 <br>
 疎通検証の実施に伴って口コミの一覧表示(GET, /reviews)のAPIを実装するため、SELECT文でreviewsテーブルの全カラムを取得するDQLを記述。DMLで入力したデータが適切に登録されているか、格納されているデータが正常に取得出来るかどうかの確認を目的とした。<br>
 <br>
-以降はSELECT文に加えてORDER BY, LIMITなどを用いることで、実装したAPIに応じた処理を行ってデータを取得する予定。
+以降はSELECT文に加えてORDER BY, LIMITなどを用いることで、実装したAPIに応じた処理を行ってデータを取得する予定。<br>
+<br>
+以下、APIに応じたSELECT文を記載。
+| API名 | 処理内容 | ファイル | 
+|:-----:|:-----:|:-----:|
+| GET, /reviews | 口コミ一覧表示 | |

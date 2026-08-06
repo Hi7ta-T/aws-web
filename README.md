@@ -154,8 +154,8 @@ terraform fmt / validateとTFLintでセルフレビューを実施。疎通検�
 [セルフレビュー・検証結果](docs/verification.md)
 
 ## 運用設計
-CloudWatch AlarmsとSNSを連携させて障害発生時に通知することで、障害の早期発見と迅速な復旧対応を実施。<br>
-なお、CloudWatch Alarmsの閾値は疎通検証の際のMetricsから選定する予定である。<br>
+CloudWatch AlarmsとSNSを連携させて障害発生時に通知することで、障害の早期発見と迅速な復旧対応を目的としている。<br>
+なお、CloudWatch Alarmsの閾値は疎通検証時に取得したメトリクス値を基に設定する予定。<br>
 <br>
 運用設計書はこちら<br>
 [運用設計書](docs/trouble-shooting.md)

@@ -44,4 +44,4 @@ FastAPIでのリクエストに応じてSELECT文を実行し、取得したデ�
 以下、APIに応じたSELECT文を記載。
 | API名 | 処理内容 | ファイル | 
 |:-----:|:-----:|:-----:|
-| GET, /reviews | 口コミ一覧表示 | |
+| GET /reviews | 登録した口コミの一覧表示 | users) | [get_reviews.sql](../db/queries/get_reviews.sql) |

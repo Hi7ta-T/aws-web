@@ -109,7 +109,7 @@ VPC, ALB, EC2, RDS, NAT Gateway, Route 53, SSM, CloudWatch(Metrics, Alarms) SNS,
 | クラウドAPI | AWS API<br>(Terraform AWS Provider) |
 
 ### Web APIの構築
-REST APIでのCRUD実装に向けて、現在はMySQLのテーブル構築を実施している。
+REST APIでのCRUD実装に向けて、現在はDMLでのサンプルデータ入力を実施している。
 
 ## DB設計
 ![ER図](docs/er-diagram.png)
@@ -154,7 +154,8 @@ terraform fmt / validateとTFLintでセルフレビューを実施。疎通検�
 [セルフレビュー・検証結果](docs/verification.md)
 
 ## 運用設計
-CloudWatch AlarmsとSNSを連携させて障害発生時に通知することで、障害の早期発見と迅速な復旧対応へと連携。<br>
+CloudWatch AlarmsとSNSを連携させて障害発生時に通知することで、障害の早期発見と迅速な復旧対応を実施。<br>
+なお、CloudWatch Alarmsの閾値は疎通検証の際のMetricsから選定する予定である。<br>
 <br>
 運用設計書はこちら<br>
 [運用設計書](docs/trouble-shooting.md)

@@ -25,3 +25,14 @@
 - **API実装、DB設計** <br>
 完了：エンティティの選定、ER図の作成<br>
 実施中：DMLでのサンプルデータ入力、REST API のCRUD構築<br>
+
+## 今後の展望
+アプリケーションに用いるAPIやDBの構築、フロントエンドの作成を行い、年内を目標に一つのアプリケーションとして機能させることを最終目標として置いている。<br>
+1. FastAPI(Python)でのCRUD構築
+2. TerraformでVPC外リソースのIaC化<br>
+(Route 53,SNS,CloudWatch、ACM)
+3. SSMの通信経路変更<br>
+(NAT Gateway → VPC Endpoint)
+4. アプリケーションのマルチリージョン化
+5. Route 53の自動フェイルオーバー有効化
+

@@ -38,7 +38,6 @@
 
 ## 今後の展望
 アプリケーションに用いるAPIやDBの構築、フロントエンドの作成を行い、年内を目標に一つのアプリケーションとして機能させることを最終目標として置いている。<br>
-<br>
 1. FastAPI(Python)でのCRUD構築
 2. TerraformでVPC外リソースのIaC化<br>
 (Route 53,SNS,CloudWatch、ACM)

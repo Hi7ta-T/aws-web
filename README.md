@@ -60,7 +60,7 @@ NW構成、リソースの選定や運用設計の作成を経て、DB構築ま�
 <br>
 ### 技術スタック
 - AWS（クラウド）<br>
-VPC, ALB, EC2, RDS, NAT Gateway, Route 53, SSM, CloudWatch(Metrics, Alarms) SNS, ACM を使用。
+VPC, ALB, EC2, RDS, NAT Gateway, Route 53, SSM, CloudWatch(Metrics, Alarms) , SNS, ACM を使用。
 - Python (プログラミング言語)<br>
 追加ライブラリは別途記載。
 - Terraform（IaC)
@@ -102,7 +102,7 @@ VPC, ALB, EC2, RDS, NAT Gateway, Route 53, SSM, CloudWatch(Metrics, Alarms) SNS,
 | API名 | 今回使用するAPI | 
 |:-----:|:-----:|
 | Web API | FastAPI(Python) |
-| OS API | Python内部ライブラリ<br>OS機能を使用する際に呼出 |
+| OS API | Python標準ライブラリ<br>OS機能を使用する際に呼出 |
 | ライブラリAPI | FastAPI, Uvicorn, SQLAlchemy, passlibなど<br>必要な機能に応じたライブラリを使用 |
 | クラウドAPI | AWS API<br>(Terraform AWS Provider) |
 

@@ -109,7 +109,7 @@ VPC, ALB, EC2, RDS, NAT Gateway, Route 53, SSM, CloudWatch(Metrics, Alarms) SNS,
 ### Web APIの構築
 REST APIでのCRUD実装に向けて、現在はDMLでのサンプルデータ入力を実施している。<br>
 <br>
-APIの実装コードはこちら<br>
+API仕様、実装内容はこちら<br>
 [API実装](docs/api-spec.md)
 
 ## DB設計
@@ -177,8 +177,8 @@ CloudWatch AlarmsとSNSを連携させて障害発生時に通知することで
 - [運用設計書](docs/trouble-shooting.md)<br>
 インスタンス障害、AZ障害、リージョン障害時の現段階の障害検知と可用性を確保するための対策を記載。補足としてアプリケーション障害時の対応も述べている。
 
-- [API実装](docs/api-soec.md)<br>
+- [API実装](docs/api-spec.md)<br>
 FastAPIを用いたREST APIのCRUD実装について、使用したライブラリ、ならびに設定したHTTPメソッドやエンドポイント(URL)などを含めて記載。
 
 - [DB設計](docs/db-design.md)<br>
-MySQLを用いたテーブルの構築、サンプルデータの格納やAPIに対応したDQLの処理について記載。
+REST APIによるCRUD実装に向けて、DMLを用いたサンプルデータの登録を実施。登録したデータを使用してAPIの動作検証を行う予定としている。

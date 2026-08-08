@@ -105,15 +105,18 @@ VPC, ALB, EC2, RDS, NAT Gateway, Route 53, SSM, CloudWatch(Metrics, Alarms) SNS,
 | クラウドAPI | AWS API<br>(Terraform AWS Provider) |
 
 ### Web APIの構築
-REST APIでのCRUD実装に向けて、現在はDMLでのサンプルデータ入力を実施している。
+REST APIでのCRUD実装に向けて、現在はDMLでのサンプルデータ入力を実施している。<br>
+<br>
+APIの実装コードはこちら<br>
+[API実装](docs/api-spec.md)
 
 ## DB設計
 ![ER図](docs/er-diagram.png)
 ユーザー(user)、場所(spot)、口コミ(review)の3つのエンティティを使用。<br>
 MySQLのDDLを用いてDBテーブルを作成。<br>各エンティティのテーブル作成後にサンプルデータを格納し、構築したAPIで検証予定。<br>
 <br>
-API実装コード、DB設計(SQL)はこちら<br>
-[API実装・DB設計](docs/api-db.md)
+DBのテーブル設計(SQL)はこちら<br>
+[DB設計](docs/db-design.md)
 
 ## Terraform・疎通検証
 ### 現在のIaC化状況

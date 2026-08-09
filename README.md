@@ -109,7 +109,6 @@ VPC, ALB, EC2, RDS, NAT Gateway, Route 53, SSM, CloudWatch(Metrics, Alarms) , SN
 
 ### Web APIの構築
 REST APIでのCRUD実装に向けて、現在はDBとの接続とテーブルとクラスの紐付けを行っている。<br>  
-<br>
 API仕様、実装内容はこちら(作成中)<br>
 [API実装](docs/api-spec.md)
 
@@ -118,7 +117,7 @@ API仕様、実装内容はこちら(作成中)<br>
 ユーザー(user)、場所(spot)、口コミ(review)の3つのエンティティを使用。<br>
 MySQLのDDLを用いてDBテーブルを作成。現在は作成したテーブルににサンプルデータを格納しており、今後は実装したAPIに基づいた処理を行う予定である。<br>
 <br>
-なお、usersテーブルのpasswordに関してはpasslib[bcrypt]でハッシュ化後のデータを格納する。<br>
+なお、usersテーブルのpasswordに関してはpasslib[bcrypt]で該当のデータのハッシュ化を行い、DBにはハッシュ化されたデータを格納する。<br>
 <br>
 DBのテーブル設計(SQL)はこちら(作成中)<br>
 [DB設計](docs/db-design.md)

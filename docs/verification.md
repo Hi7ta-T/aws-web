@@ -32,13 +32,13 @@ terraform validate の実行時に頻繁に検出されたエラー例を記載�
 (security_groups , vpc_security_group_ids)
 
 ## 構築検証
-terraform applyで作成するリソース数を確認してからterraform planを実施。エラーが発生した場合はエラー文をコピーしてドキュメントに保存することで、後からエラー内容を確認してコードの修正を行った。<br>
+terraform planで作成するリソース数を確認してからterraform applyを実施。エラーが発生した場合はエラー文をコピーしてドキュメントに保存することで、後からエラー内容を確認してコードの修正を行った。<br>
 <br>
 なお、作成軸として「コスト」を掲げているため、エラー文のドキュメント保存完了後はterraform destroyでリソース数を確認の上、リソースを削除した。
 
 ### 第1回構築検証(2026/08/08)
 30件のリソースのうち、21件が構築成功。<br>
-残りのリソースに関しては3種類、5件のエラーが発生。依存関係も含めて9件のリソースを構築することが出来なかった。<br>
+3種類、5件のエラーが発生したため、依存関係も含めて9件のリソースを構築することが出来なかった。<br>
 <br>
 発生したエラーは以下の通りである。(実際のエラー内容を抜粋)<br>
 - ` Error: creating EC2 Instance: operation error EC2: RunInstances, https response error StatusCode: 400 `

@@ -14,13 +14,13 @@ API実装に関する追加ライブラリとしてFastAPIとUvicorn、SQLAlchem
 | 口コミの新規登録 | POST | /reviews |
 | ユーザーの新規登録 | POST | /users |
 | 場所の新規登録 | POST | /spots |
-| 口コミの削除 | DELETE | /reviews |
-| ユーザーの削除 | DELETE | /users |
+| 口コミの削除 | DELETE | /reviews/{review_id} |
+| ユーザーの削除 | DELETE | /users/{user_id} |
 
 ## API実装手順
 1. MySQLのDBとPythonを接続
 2. DBテーブル・APIモデルの紐付け
-3. エンドポイント定義、変数を用いて実際の処理を記載
+3. 関数を用いて対応する処理を記載
 
 ### MySQLのDBとPythonを接続
 

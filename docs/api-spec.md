@@ -1,5 +1,5 @@
 ## API実装
-API実装に関する追加ライブラリとしてFastAPIとUvicornを使用。<br>
+API実装に関する追加ライブラリとしてFastAPIとUvicorn、SQLAlchemyを使用。<br>
 疎通検証を実施するため、最初に口コミの一覧表示(GET, /reviews)のAPI実装を行い、その後は必要に応じたAPIを作成する予定としている。
 
 ## エンドポイント定義
@@ -16,3 +16,7 @@ API実装に関する追加ライブラリとしてFastAPIとUvicornを使用。
 | 場所の新規登録 | POST | /spots |
 | 口コミの削除 | DELETE | /reviews |
 
+## API実装手順
+1. MySQLのDBとPythonを接続
+2. DBテーブルとAPIクラスの紐付け
+3. エンドポイント定義、変数を用いて実際の処理を記載

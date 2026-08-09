@@ -7,8 +7,8 @@
 - [アーキテクチャ方針](#アーキテクチャ方針)
 - [使用技術一覧](#使用技術一覧)
 - [NW構成](#NW構成)
-- [API実装(作成中)](#API実装)
-- [DB設計(作成中)](#DB設計)
+- [API実装](#API実装)
+- [DB設計](#DB設計)
 - [Terraform・リソース構築](#Terraformリソース構築)
 - [疎通検証](#疎通検証)
 - [運用設計](#運用設計)
@@ -110,7 +110,7 @@ VPC, ALB, EC2, RDS, NAT Gateway, Route 53, SSM, CloudWatch(Metrics, Alarms) , SN
 ### Web APIの構築
 REST APIでのCRUD実装に向けて、現在はDMLでのサンプルデータ入力を実施している。<br>
 <br>
-API仕様、実装内容はこちら<br>
+API仕様、実装内容はこちら(作成中)<br>
 [API実装](docs/api-spec.md)
 
 ## DB設計
@@ -118,7 +118,7 @@ API仕様、実装内容はこちら<br>
 ユーザー(user)、場所(spot)、口コミ(review)の3つのエンティティを使用。<br>
 MySQLのDDLを用いてDBテーブルを作成。<br>各エンティティのテーブル作成後にサンプルデータを格納し、構築したAPIで検証予定。<br>
 <br>
-DBのテーブル設計(SQL)はこちら<br>
+DBのテーブル設計(SQL)はこちら(作成中)<br>
 [DB設計](docs/db-design.md)
 
 ## Terraform・リソース構築
@@ -159,7 +159,7 @@ terraform fmt / validateとTFLintでセルフレビューを実施し、疎通�
 [セルフレビュー・構築検証](docs/verification.md)
 
 ## 疎通検証
-FastAPIでの口コミ一覧取得(GET /reviews)の作成後、Terraformで構築したリソースを用いて疎通検証を予定している。
+FastAPIでの口コミ一覧取得(GET /reviews)の作成後、Terraformで構築を進めているAWSリソースを用いて疎通検証を予定している。
 
 疎通検証方法、検証結果はこちら(作成中)<br>
 [疎通検証・検証結果](docs/connectivity-testing.md)
@@ -182,7 +182,10 @@ CloudWatch AlarmsとSNSを連携させて障害発生時に通知することで
 セキュリティを鑑みたサブネット配置やCIDR、SGについて記載。
 
 - [セルフレビュー・検証結果](docs/verification.md)<br>
-前半はterraform fmt / validate やTFLintを用いたセルフレビューと頻出したエラーを記載。後半は作成したコードで行った経路別の疎通検証結果を記録している。
+前半はterraform fmt / validate やTFLintを用いたセルフレビューと頻出したエラーを記載。後半は作成したコードで行ったリソースの構築検証結果を書き留めている。
+
+- [疎通検証・検証結果](docs/connectivity-testing.md)<br>
+疎通検証を実施する通信経路、また経路別の検証手段について記載。疎通検証実施の過程も記載する予定としている。
 
 - [運用設計書](docs/trouble-shooting.md)<br>
 インスタンス障害、AZ障害、リージョン障害時の現段階の障害検知と可用性を確保するための対策を記載。補足としてアプリケーション障害時の対応も述べている。

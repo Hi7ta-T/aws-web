@@ -31,3 +31,9 @@ terraform validate の実行時に頻繁に検出されたエラー例を記載�
 - リソース別のSecurity Group 指定ミス<br>
 (security_groups , vpc_security_group_ids)
 
+## 構築検証
+terraform applyで作成するリソース数、ならびにエラーが発生していないことを確認してterraform planを実施。エラーが発生した場合はエラー文をコピーしてドキュメントに保存することで、後からエラー内容を確認してコードの修正を行った。<br>
+<br>
+なお、作成軸として「コスト」を掲げているため、エラー文のドキュメント保存完了後はterraform destroyでリソース数を確認の上、リソースの削除を行った。
+
+### 第1回構築検証(2026/08/08)

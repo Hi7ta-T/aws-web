@@ -152,7 +152,7 @@ DBのテーブル設計(SQL)はこちら<br>
 terraform fmt / validateとTFLintでセルフレビューを実施し、疎通検証後にtfsecでのセキュリティチェックを予定している。<br>
 <br>
 また、2026年8月に最初のリソース構築(terraform apply)を実施。<br>
-30件のリソース数のうち21件が構築成功、9件がエラーにより構築失敗となった。現在はエラー文を元に、コードの修正を行っている。<br>
+30件のリソース数のうち21件が構築成功、9件がエラーにより構築失敗となった。現在はterraform apply時に取得したエラー文を元にコードの修正を行っている。<br>
 <br>
 セルフレビュー方法、リソースの構築検証結果はこちら(作成中)<br>
 
@@ -162,8 +162,7 @@ terraform fmt / validateとTFLintでセルフレビューを実施し、疎通�
 FastAPIでの口コミ一覧取得(GET /reviews)の作成後、Terraformで構築したリソースを用いて疎通検証を予定している。
 
 疎通検証方法、検証結果はこちら(作成中)<br>
-
-[疎通検証・検証結果](docs/verification.md)
+[疎通検証・検証結果](docs/connectivity-testing.md)
 
 ## 運用設計
 CloudWatch AlarmsとSNSを連携させて障害発生時に通知することで、障害の早期発見と迅速な復旧対応を目的としている。<br>

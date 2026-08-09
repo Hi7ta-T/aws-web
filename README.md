@@ -114,7 +114,7 @@ API仕様、実装内容はこちら(作成中)<br>
 
 ## DB設計
 ![ER図](docs/er-diagram.png)
-ユーザー(user)、場所(spot)、口コミ(review)の3つのエンティティを使用。<br>
+ユーザー(users)、場所(spots)、都道府県(prefectures)、口コミ(reviews)の4つのエンティティを使用。<br>
 MySQLのDDLを用いてDBテーブルを作成。現在は作成したテーブルににサンプルデータを格納しており、今後は実装したAPIに基づいた処理を行う予定である。<br>
 <br>
 なお、usersテーブルのpasswordに関してはpasslib[bcrypt]で該当データのハッシュ化を行い、DBにはハッシュ化後のデータを格納する。<br>

@@ -9,7 +9,8 @@
 - [NW構成](#NW構成)
 - [API実装(作成中)](#API実装)
 - [DB設計(作成中)](#DB設計)
-- [Terraform・疎通検証](#Terraform疎通検証)
+- [Terraform・リソース構築](#Terraformリソース構築)
+- [疎通検証](#疎通検証)
 - [運用設計](#運用設計)
 - [ドキュメントリンク一覧](#リンク一覧)
 
@@ -120,7 +121,7 @@ MySQLのDDLを用いてDBテーブルを作成。<br>各エンティティのテ
 DBのテーブル設計(SQL)はこちら<br>
 [DB設計](docs/db-design.md)
 
-## Terraform・疎通検証
+## Terraform・リソース構築
 ### 現在のIaC化状況
 インフラ基盤となる3層構成(ALB/EC2/RDS)に関わる主要リソースのIaC化が完了。
 
@@ -147,12 +148,22 @@ DBのテーブル設計(SQL)はこちら<br>
 | CloudWatch<br>(Alarms) | [cloudwatch.tf](terraform/cloudwatch.tf)|
 | ACM | [acm.tf](terraform/acm.tf)| 
 
-### セルフレビューと疎通検証
-terraform fmt / validateとTFLintでセルフレビューを実施。疎通検証後にtfsecでのセキュリティチェックを予定している。<br>
+### セルフレビューとリソース構築
+terraform fmt / validateとTFLintでセルフレビューを実施し、疎通検証後にtfsecでのセキュリティチェックを予定している。<br>
 <br>
-セルフレビュー方法、リソースの検証方法と疎通結果はこちら(現在作成中)<br>
+また、2026年8月に最初のリソース構築(terraform apply)を実施。<br>
+30件のリソース数のうち21件が構築成功、9件がエラーにより構築失敗となった。現在はエラー文を元に、コードの修正を行っている。<br>
+<br>
+セルフレビュー方法、リソースの構築検証結果はこちら(作成中)<br>
 
-[セルフレビュー・検証結果](docs/verification.md)
+[セルフレビュー・構築検証](docs/verification.md)
+
+## 疎通検証
+FastAPIでの口コミ一覧取得(GET /reviews)の作成後、Terraformで構築したリソースを用いて疎通検証を予定している。
+
+疎通検証方法、検証結果はこちら(作成中)<br>
+
+[疎通検証・検証結果](docs/verification.md)
 
 ## 運用設計
 CloudWatch AlarmsとSNSを連携させて障害発生時に通知することで、障害の早期発見と迅速な復旧対応を目的としている。<br>

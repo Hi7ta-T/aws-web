@@ -40,7 +40,7 @@ terraform applyで作成するリソース数を確認してからterraform plan
 30件のリソースのうち、21件が構築成功。<br>
 残りのリソースに関しては3種類、5件のエラーが発生。依存関係も含めて9件のリソースを構築することが出来なかった。<br>
 <br>
-発生したエラーは以下の通りである。(実際のエラーを抜粋)<br>
+発生したエラーは以下の通りである。(実際のエラー内容を抜粋)<br>
 - ` Error: creating EC2 Instance: operation error EC2: RunInstances, https response error StatusCode: 400 `
 - ` Error: creating EC2 NAT Gateway: operation error EC2: CreateNatGateway, https response error StatusCode: 400 `
 - ` Error: "username": required field is not set with aws_db_instance.aws-rds `

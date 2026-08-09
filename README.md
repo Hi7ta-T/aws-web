@@ -33,7 +33,7 @@
 ### 大目標と構築状況
 2026年内に1つのアプリケーションとして機能させることを大目標として構築を進めている。<br>
 <br>
-NW構成、リソースの選定や運用設計の作成を経て、DB構築まで完了。現在はREST APIのコーディングやCloudflareで取得したドメインのNS移行を行い、疎通検証に向けた取り組みを進めている。<br>
+NW構成、リソースの選定や運用設計の作成を経て、DB構築まで完了。現在はTerraformのリソース構築検証時に発生したエラーの修正、REST APIのコーディングやCloudflareで取得したドメインのNS移行を行い、疎通検証に向けた取り組みを進めている。<br>
 <br>
 開発フローや構築状況、今後の展望はこちら<br>
 [開発フロー・現在の構築状況](docs/development-process.md)
@@ -103,12 +103,12 @@ VPC, ALB, EC2, RDS, NAT Gateway, Route 53, SSM, CloudWatch(Metrics, Alarms) , SN
 | API名 | 今回使用するAPI | 
 |:-----:|:-----:|
 | Web API | FastAPI(Python) |
-| OS API | Python標準ライブラリ<br>OS機能を使用する際に呼出 |
+| OS API | 標準ライブラリ<br>OS機能を使用する際に呼出 |
 | ライブラリAPI | FastAPI, Uvicorn, SQLAlchemy, passlibなど<br>必要な機能に応じたライブラリを使用 |
 | クラウドAPI | AWS API<br>(Terraform AWS Provider) |
 
 ### Web APIの構築
-REST APIでのCRUD実装に向けて、現在はDMLでのサンプルデータ入力を実施している。<br>
+REST APIでのCRUD実装に向けて、現在はDBとの接続とテーブルとクラスの紐付けを行っている。<br>  
 <br>
 API仕様、実装内容はこちら(作成中)<br>
 [API実装](docs/api-spec.md)
@@ -116,7 +116,9 @@ API仕様、実装内容はこちら(作成中)<br>
 ## DB設計
 ![ER図](docs/er-diagram.png)
 ユーザー(user)、場所(spot)、口コミ(review)の3つのエンティティを使用。<br>
-MySQLのDDLを用いてDBテーブルを作成。<br>各エンティティのテーブル作成後にサンプルデータを格納し、構築したAPIで検証予定。<br>
+MySQLのDDLを用いてDBテーブルを作成。現在は作成したテーブルににサンプルデータを格納しており、今後は実装したAPIに基づいた処理を行う予定である。<br>
+<br>
+なお、usersテーブルのpasswordに関してはpasslib[bcrypt]でハッシュ化後のデータを格納する。<br>
 <br>
 DBのテーブル設計(SQL)はこちら(作成中)<br>
 [DB設計](docs/db-design.md)
